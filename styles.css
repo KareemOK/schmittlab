@@ -534,6 +534,33 @@ nav a.active {
   box-shadow: 0 5px 14px rgba(30, 86, 49, 0.14);
 }
 
+
+/* === Force correct styling for team cards everywhere === */
+
+.members-grid .team-name,
+.member-card .team-name,
+.homepage-team .team-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+}
+
+.members-grid .team-role,
+.member-card .team-role,
+.homepage-team .team-role {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1E5631;
+  text-align: center;
+}
+
+/* Make sure card text doesn't inherit weird justification */
+.member-card .team-name,
+.member-card .team-role {
+  text-align: center;
+}
+
 .member-name {
   font-size: 1.15rem;
   font-weight: 700;
@@ -1072,31 +1099,7 @@ nav a.active {
   }
 }
 
-/* === Force correct styling for team cards everywhere === */
 
-.members-grid .team-name,
-.member-card .team-name,
-.homepage-team .team-name {
-  font-size: 1.1rem;
-  font-weight: 700 !important;
-  color: #222 !important;
-  text-align: center;
-}
-
-.members-grid .team-role,
-.member-card .team-role,
-.homepage-team .team-role {
-  font-size: 0.9rem;
-  font-weight: 600 !important;
-  color: #1E5631 !important;
-  text-align: center;
-}
-
-/* Make sure card text doesn't inherit weird justification */
-.member-card .team-name,
-.member-card .team-role {
-  text-align: center;
-}
 
 
 
