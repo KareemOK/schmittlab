@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Schmitt Group | Publications</title>
+
+  <meta name="description" content="Publications from the Schmitt Group at Trinity College Dublin in inorganic and materials chemistry. Publications include developing materials for catalytic water splitting and direct air capture, utilising supramolecular chemistry (MOFs, coordination cages) and carbon nanomaterials among others." />
+  <meta name="robots" content="index, follow" />
+
+  <meta name="author" content="Kareem Ouhalla Knipschild" />
+  <meta name="creator" content="Kareem Ouhalla Knipschild" />
+
+  <link rel="canonical" href="https://schmittlab.com/publications.html" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Schmitt Group — Publications" />
+  <meta property="og:description" content="Publications from the Schmitt Group at Trinity College Dublin in inorganic and materials chemistry." />
+  <meta property="og:image" content="assets/og-preview.png" />
+  <meta property="og:image:alt" content="Schmitt Group research on catalytic water splitting and direct air capture at Trinity College Dublin" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Schmitt Group — Publications" />
+  <meta name="twitter:description" content="Research publications from the Schmitt Group at Trinity College Dublin." />
+  <meta name="twitter:image" content="assets/og-preview.png" />
+
+ <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ResearchOrganization",
+    "name": "Schmitt Group",
+    "description": "Academic inorganic and materials research group, focused on catalytic water splitting and direct air capture, utilising supramolecular chemistry (MOFs, coordination cages), carbon nanomaterials, and many other materials.",
+    "parentOrganization": {
+      "@type": "CollegeOrUniversity",
+      "name": "Trinity College Dublin"
+    },
+    "knowsAbout": [
+      "Carbon capture",
+      "Direct air capture",
+      "Supramolecular chemistry",
+      "Water splitting",
+      "Metal-organic-frameworks",
+      "MOFs",
+      "Green chemistry",
+      "Oxygen evolution",
+      "Hydrogen evolution",
+      "Carbon nanomaterials",
+      "Graphene"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+<header>
+  <div class="header-top">
+    <a href="/" class="logo-container">
+    <img src="assets/tcd.svg" alt="Trinity College Dublin" class="logo-img">
+      <span class="logo-text">Schmitt Group</span>
+    </a>
+
+    <button class="nav-toggle"
+            aria-label="Toggle navigation menu"
+            aria-controls="site-nav"
+            aria-expanded="false">☰</button>
+  </div>
+
+  <nav class="main-nav" id="site-nav" aria-label="Main navigation">
+    <a href="/">Home</a>
+    <a href="publications.html">Publications</a>
+    <a href="c4c.html">C4C-Capture Project</a>
+    <a href="water-splitting.html">MOFs for Water Splitting</a>
+    <a href="members.html">Members</a>
+  </nav>
+</header>
+
+<main>
+  <section class="section" aria-labelledby="publications-heading">
+    <h1 id="publications-heading">Publications</h1>
+
+    <ul class="pub-list" id="pub-list" aria-live="polite"></ul>
+
+    <div id="pub-error"
+         role="alert"
+         style="display:none; margin-top:1rem; padding:1rem; background:#fff3cd; border-radius:8px;">
+      Could not load publications. Please check that <code>publications.json</code> is in the same folder as <code>publications.html</code>.
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-content">
+
+    <div class="footer-contact">
+      <div class="footer-contact-label">Contact</div>
+
+      <a href="mailto:schmittw@tcd.ie" class="footer-contact-item">
+        <span class="icon">
+          <img src="assets/email.svg" alt="">
+        </span>
+        <span>Email us</span>
+      </a>
+
+      <a href="https://www.linkedin.com/" target="_blank" class="footer-contact-item">
+        <span class="icon">
+          <img src="assets/linkedin.svg" alt="">
+        </span>
+        <span>Find us on LinkedIn</span>
+      </a>
+    </div>
+
+    <div class="footer-funding-block">
+      <div class="footer-funding-label">Supported by</div>
+
+      <div class="footer-funding">
+        <a href="https://www.tcd.ie" target="_blank" rel="noopener">
+          <img src="assets/trinity-long.svg" class="priority" alt="Trinity College Dublin">
+        </a>
+        <a href="https://www.ambercentre.ie" target="_blank" rel="noopener">
+          <img src="assets/amber.svg" class="priority" alt="AMBER research centre">
+        </a>
+        <a href="https://www.researchireland.ie" target="_blank" rel="noopener">
+          <img src="assets/research_ireland.svg" alt="Research Ireland">
+        </a>
+        <a href="https://www.epa.ie" target="_blank" rel="noopener">
+          <img src="assets/epa.svg" alt="Environmental Protection Agency">
+        </a>
+        <a href="https://eic.ec.europa.eu" target="_blank" rel="noopener">
+          <img src="assets/eic.svg" alt="European Innovation Council">
+        </a>
+        <a href="https://erc.europa.eu/homepage" target="_blank" rel="noopener">
+          <img src="assets/erc.svg" alt="European Research Council">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 Schmitt Group
+  </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("pub-list");
+  const errorBox = document.getElementById("pub-error");
+  if (!container) return;
+
+  const escapeHtml = (str = "") =>
+    String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+
+  function formatAuthorsInitials(str = "") {
+  return str.split(/\s+and\s+/).map(author => {
+    author = author.trim();
+    if (!author) return "";
+
+    if (author.includes(",")) {
+      const parts = author.split(",");
+      const last = parts[0].trim();
+      const rest = parts.slice(1).join(" ").trim();
+      if (!rest) return last;
+
+      const initials = rest.split(/\s+/).map(tok => {
+        tok = tok.replace(/\.$/, "");
+        return tok[0].toUpperCase() + ".";
+      }).join(" ");
+
+      return `${last}, ${initials}`.replace(/\.+$/, "");
+    }
+
+    const tokens = author.split(/\s+/).filter(Boolean);
+    if (tokens.length === 1) {
+      // single-name mononym, keep as-is
+      return tokens[0];
+    }
+
+    const last = tokens[tokens.length - 1];
+    const firsts = tokens.slice(0, -1);
+
+    const initials = firsts.map(tok => {
+      tok = tok.replace(/\.$/, "");
+      return tok[0].toUpperCase() + ".";
+    }).join(" ");
+
+    return `${last}, ${initials}`.replace(/\.+$/, "");
+  }).filter(Boolean).join("; ");
+}
+
+  const buildCitation = (pub) => {
+    const authors = formatAuthorsInitials(pub.authors || "");
+    let parts = [];
+
+    if (authors) {
+      parts.push(escapeHtml(authors) + ".");
+    }
+
+    if (pub.title) {
+      parts.push(escapeHtml(pub.title) + ".");
+    }
+
+    const journalBits = [];
+
+    if (pub.journal) {
+      journalBits.push(`<em>${escapeHtml(pub.journal)}</em>`);
+    }
+
+    if (pub.year) {
+      journalBits.push(`<strong>${escapeHtml(pub.year)}</strong>`);
+    }
+
+    const volIssue = [];
+    if (pub.volume) {
+      volIssue.push(escapeHtml(pub.volume));
+    }
+
+    const issue = pub.issue || pub.number;
+    if (issue) {
+      volIssue.push("(" + escapeHtml(issue) + ")");
+    }
+
+    if (volIssue.length) {
+      journalBits.push(volIssue.join(" "));
+    }
+
+    if (pub.pages) {
+      journalBits.push(escapeHtml(pub.pages));
+    }
+
+    if (journalBits.length) {
+      parts.push(journalBits.join(", ") + ".");
+    }
+
+    if (pub.doi) {
+      const doi = escapeHtml(pub.doi.trim());
+      parts.push(
+        `DOI: <a href="https://doi.org/${doi}" target="_blank" rel="noopener noreferrer">${doi}</a>.`
+      );
+    }
+
+    return parts.join(" ");
+  };
+
+  // Add ?cb=... so we always get the latest JSON
+  fetch("publications.json?cb=" + Date.now())
+    .then(res => {
+      if (!res.ok) throw new Error("Failed to load publications.json");
+      return res.json();
+    })
+    .then(items => {
+      if (!Array.isArray(items) || items.length === 0) {
+        container.innerHTML = "<li>No publications found.</li>";
+        return;
+      }
+
+      const sorted = [...items].sort(
+        (a, b) => parseInt(b.year || "0", 10) - parseInt(a.year || "0", 10)
+      );
+
+      sorted.forEach(pub => {
+        const li = document.createElement("li");
+        li.className = "publication-item";
+
+        const citationHTML = buildCitation(pub);
+
+        li.innerHTML = `
+          <p class="pub-citation">${citationHTML}</p>
+        `;
+
+        container.appendChild(li);
+      });
+    })
+    .catch(err => {
+      console.error(err);
+      if (errorBox) errorBox.style.display = "block";
+    });
+});
+</script>
+  
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.querySelector(".nav-toggle");
+    const nav = document.querySelector(".main-nav");
+    if (!toggle || !nav) return;
+
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", nav.classList.contains("open"));
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const current = location.pathname.split("/").pop();
+    document.querySelectorAll(".main-nav a").forEach(link => {
+      if (link.getAttribute("href") === current) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Schmitt Group",
+  "url": "https://schmittgroup.ie/",
+  "creator": {
+    "@type": "Person",
+    "name": "Kareem Ouhalla Knipschild",
+    "description": "Website design and development"
+  }
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

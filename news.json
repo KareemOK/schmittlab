@@ -1,0 +1,39 @@
+[
+  {
+    "date": "2026-01-17",
+    "title": "New group website launched",
+    "text": "We are happy to announce our new group website. Check out our research, publications and group members!",
+    "image": "assets/news/trinity-long.svg"
+  },
+  {
+    "date": "2025-09-01",
+    "title": "C4C-Capture project officially launched",
+    "text": "The EPA-funded C4C-Capture project has begun, focusing on biomass- and biowaste-derived carbon materials for DAC.",
+    "image": "assets/epa.svg",
+    "link": "c4c.html"
+  },
+  {
+    "date": "2024-12-16",
+    "title": "New publication in Nature Communications",
+    "text": "Our work on supramolecular metal–organic capsules has been published in Nature Communications.",
+    "image": "assets/news/trinity-long.svg",
+    "link": "publications.html"
+  },
+  {
+    "date": "2024-11-02",
+    "title": "New publication in Nature Communications",
+    "text": "Our work on supramolecular metal–organic capsules has been published in Nature Communications.",
+    "image": "assets/news/Wolfgang.png"
+  }
+]
+
+
+
+
+
+
+
+
+
+
+
