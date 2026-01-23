@@ -1,6 +1,3 @@
-/* =========================
-   Base
-   ========================= */
 body {
   margin: 0;
   font-family: "Atkinson Hyperlegible", sans-serif;
@@ -16,9 +13,6 @@ h2 {
   margin-top: 0;
 }
 
-/* =========================
-   Header & Navigation
-   ========================= */
 header {
   display: flex;
   justify-content: space-between;
@@ -93,7 +87,6 @@ nav a.active {
   font-weight: 700;
 }
 
-/* Burger + main nav layout */
 .nav-toggle {
   display: none;
   font-size: 1.8rem;
@@ -109,9 +102,6 @@ nav a.active {
   gap: 1.8rem;
 }
 
-/* =========================
-   Hero
-   ========================= */
 .hero {
   height: 65vh;
   display: flex;
@@ -189,7 +179,6 @@ nav a.active {
   border-color: #2f5d8a;
 }
 
-/* Generic button */
 .button {
   display: inline-block;
   padding: 0.8rem 1.5rem;
@@ -207,18 +196,12 @@ nav a.active {
   transform: translateY(-2px);
 }
 
-/* =========================
-   Layout sections
-   ========================= */
 .section {
   padding: 3rem 2rem;
   max-width: 900px;
   margin: 0 auto;
 }
 
-/* =========================
-   News
-   ========================= */
 .news-list {
   display: flex;
   flex-direction: column;
@@ -276,7 +259,6 @@ nav a.active {
   text-decoration: underline;
 }
 
-/* Variants */
 .news-item-compact {
   padding: 0.9rem 1.1rem;
   background: #fafafa;
@@ -331,7 +313,6 @@ nav a.active {
   max-height: 120px;
 }
 
-/* Two-column layout on larger screens */
 @media (min-width: 700px) {
   .news-list {
     display: grid;
@@ -340,9 +321,6 @@ nav a.active {
   }
 }
 
-/* =========================
-   Recent publications (home)
-   ========================= */
 #recent-publications {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -385,7 +363,6 @@ nav a.active {
   color: #555;
 }
 
-/* Hyphenation + wrapping */
 .recent-pub-item,
 .recent-pub-item .pub-title,
 .recent-pub-item .pub-authors,
@@ -399,7 +376,6 @@ nav a.active {
   word-wrap: break-word;
 }
 
-/* View-all CTA (home + team) */
 .recent-pub-cta,
 .team-card-cta {
   display: flex;
@@ -444,7 +420,6 @@ nav a.active {
   transition: transform 0.2s ease;
 }
 
-/* DOI pill button */
 .pub-doi-wrap {
   margin-top: 1.1rem;
   display: flex;
@@ -482,9 +457,6 @@ nav a.active {
   transform: translateY(-1px);
 }
 
-/* =========================
-   Team / Members (home + members page)
-   ========================= */
 .homepage-team {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -509,7 +481,6 @@ nav a.active {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
-/* Shared avatar styling */
 .member-photo,
 .team-photo {
   border: 3px solid #1E5631;
@@ -517,7 +488,6 @@ nav a.active {
   background: #ffffff;
 }
 
-/* Default team photo size */
 .team-photo {
   width: 140px;
   height: 140px;
@@ -526,7 +496,6 @@ nav a.active {
   margin-bottom: 0.75rem;
 }
 
-/* Member cards */
 .members-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -561,7 +530,6 @@ nav a.active {
   margin-top: 0.75rem;
 }
 
-/* Slightly different shadow for non-PI cards */
 .member-card:not(.pi-profile) .member-photo {
   box-shadow: 0 5px 14px rgba(30, 86, 49, 0.14);
 }
@@ -622,7 +590,6 @@ nav a.active {
   text-decoration: underline;
 }
 
-/* PI feature card */
 .pi-profile {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -662,7 +629,6 @@ nav a.active {
   margin-bottom: 1rem;
 }
 
-/* DAC company logos under PI bio */
 .dac-companies {
   display: grid;
   grid-template-columns: repeat(auto-fit, 220px);
@@ -712,7 +678,6 @@ nav a.active {
   max-height: 30px;
 }
 
-/* Compact members grid (if needed elsewhere) */
 .members-grid.members-grid-compact {
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 1.2rem;
@@ -748,9 +713,6 @@ nav a.active {
   opacity: 0.85;
 }
 
-/* =========================
-   C4C page
-   ========================= */
 .section.c4c-header {
   max-width: 900px;
   margin: 0 auto;
@@ -787,17 +749,11 @@ nav a.active {
   margin: 0 0 1rem;
 }
 
-/* =========================
-   Water splitting page
-   ========================= */
 .water-splitting-content p {
   text-align: justify;
   text-justify: inter-word;
 }
 
-/* =========================
-   Footer
-   ========================= */
 .site-footer {
   background: #1E5631;
   color: white;
@@ -926,11 +882,6 @@ nav a.active {
   opacity: 0.85;
 }
 
-/* =========================
-   Responsive tweaks
-   ========================= */
-
-/* Nav + header mobile */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -975,7 +926,6 @@ nav a.active {
   }
 }
 
-/* Hero mobile layout */
 @media (max-width: 600px) {
   .hero {
     position: relative;
@@ -1038,7 +988,6 @@ nav a.active {
   }
 }
 
-/* PI card + members scaling on smaller screens */
 @media (max-width: 700px) {
   .pi-profile {
     grid-template-columns: 1fr;
@@ -1051,7 +1000,6 @@ nav a.active {
   }
 }
 
-/* C4C + footer + recent pubs responsiveness */
 @media (max-width: 768px) {
   .section.c4c-header {
     padding: 2rem 1.5rem 2.5rem;
@@ -1089,7 +1037,6 @@ nav a.active {
   }
 }
 
-/* Footer stacking + contact alignment */
 @media (max-width: 700px) {
   .footer-content {
     flex-direction: column;
@@ -1114,7 +1061,6 @@ nav a.active {
   }
 }
 
-/* Smaller DOI button on very small screens */
 @media (max-width: 500px) {
   .pub-doi-button {
     padding: 0.25rem 0.7rem;
@@ -1125,6 +1071,7 @@ nav a.active {
     height: 22px;
   }
 }
+
 
 
 
