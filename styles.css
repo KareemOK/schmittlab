@@ -1,3 +1,6 @@
+/* =========================
+   Base
+   ========================= */
 body {
   margin: 0;
   font-family: "Atkinson Hyperlegible", sans-serif;
@@ -13,6 +16,9 @@ h2 {
   margin-top: 0;
 }
 
+/* =========================
+   Header & Navigation
+   ========================= */
 header {
   display: flex;
   justify-content: space-between;
@@ -41,6 +47,8 @@ header {
 }
 
 .logo-container {
+  text-decoration: none;
+  cursor: pointer;
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -57,12 +65,7 @@ header {
   }
 }
 
-.logo-text {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #1E5631;
-}
-
+.logo-text,
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
@@ -90,6 +93,25 @@ nav a.active {
   font-weight: 700;
 }
 
+/* Burger + main nav layout */
+.nav-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  color: #1E5631;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+/* =========================
+   Hero
+   ========================= */
 .hero {
   height: 65vh;
   display: flex;
@@ -97,15 +119,15 @@ nav a.active {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 2rem;
-  color: white;
   padding: 8rem 2rem 4rem;
+  color: white;
   background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.45),
-      rgba(0, 0, 0, 0.45)
-    ),
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
     url("assets/group3.JPG") center / cover no-repeat;
+}
+
+.hero-content {
+  margin-top: 8rem;
 }
 
 .hero-title {
@@ -123,6 +145,13 @@ nav a.active {
   opacity: 0.95;
 }
 
+.hero-buttons {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .hero-button {
   background: #6BBF59;
   color: white;
@@ -137,13 +166,6 @@ nav a.active {
 .hero-button:hover {
   background: #5aa34f;
   transform: translateY(-2px);
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 1.2rem;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 .hero-button-secondary {
@@ -167,10 +189,7 @@ nav a.active {
   border-color: #2f5d8a;
 }
 
-.hero-content {
-  margin-top: 8rem;
-}
-
+/* Generic button */
 .button {
   display: inline-block;
   padding: 0.8rem 1.5rem;
@@ -188,12 +207,18 @@ nav a.active {
   transform: translateY(-2px);
 }
 
+/* =========================
+   Layout sections
+   ========================= */
 .section {
   padding: 3rem 2rem;
   max-width: 900px;
   margin: 0 auto;
 }
 
+/* =========================
+   News
+   ========================= */
 .news-list {
   display: flex;
   flex-direction: column;
@@ -206,11 +231,12 @@ nav a.active {
   padding: 1.2rem 1.4rem;
   border-radius: 10px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .news-item:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .news-date {
@@ -250,51 +276,7 @@ nav a.active {
   text-decoration: underline;
 }
 
-.recent-pubs {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.recent-pub-item {
-  background: #f5f5f5;
-  padding: 1.2rem;
-  border-radius: 10px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.recent-pub-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-}
-
-.recent-pub-item .pub-title {
-  font-weight: 700;
-  margin-bottom: 0.3rem;
-}
-
-.recent-pub-item .pub-authors {
-  font-size: 0.95rem;
-  color: #333;
-  margin-bottom: 0.25rem;
-}
-
-.recent-pub-item .pub-info {
-  font-size: 0.9rem;
-  color: #555;
-}
-
-.recent-pub-item,
-.recent-pub-item .pub-title,
-.recent-pub-item .pub-authors,
-.recent-pub-item .pub-info {
-  hyphens: auto;
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-  word-wrap: break-word;
-}
-
+/* Variants */
 .news-item-compact {
   padding: 0.9rem 1.1rem;
   background: #fafafa;
@@ -349,6 +331,7 @@ nav a.active {
   max-height: 120px;
 }
 
+/* Two-column layout on larger screens */
 @media (min-width: 700px) {
   .news-list {
     display: grid;
@@ -357,18 +340,151 @@ nav a.active {
   }
 }
 
-.news-item,
-.member-card,
-.team-card {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+/* =========================
+   Recent publications (home)
+   ========================= */
+#recent-publications {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: stretch;
 }
 
-.news-item:hover,
-.member-card:hover,
-.team-card:hover {
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+.recent-pub-item,
+.recent-pub-cta {
+  background: #f5f5f5;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
+.recent-pub-item:hover,
+.recent-pub-cta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.recent-pub-item .pub-title {
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.recent-pub-item .pub-authors {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.recent-pub-item .pub-info {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Hyphenation + wrapping */
+.recent-pub-item,
+.recent-pub-item .pub-title,
+.recent-pub-item .pub-authors,
+.recent-pub-item .pub-info,
+.pub-title,
+.pub-authors,
+.pub-info {
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  word-wrap: break-word;
+}
+
+/* View-all CTA (home + team) */
+.recent-pub-cta,
+.team-card-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.pub-cta-link,
+.team-cta-link {
+  text-decoration: none;
+  color: #1E5631;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.team-cta-icon,
+.pub-cta-icon {
+  font-size: 0;
+  line-height: 0;
+}
+
+.team-cta-icon::before,
+.pub-cta-icon::before {
+  content: "→";
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.team-cta-icon::before {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.pub-cta-link:hover .pub-cta-icon::before,
+.team-cta-link:hover .team-cta-icon::before {
+  transform: translateX(3px);
+  transition: transform 0.2s ease;
+}
+
+/* DOI pill button */
+.pub-doi-wrap {
+  margin-top: 1.1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.pub-doi-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  background: #ffffff;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.pub-doi-button img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.pub-doi-text {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #1E5631;
+}
+
+.pub-doi-button:hover {
+  background: #e6f3e5;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   Team / Members (home + members page)
+   ========================= */
 .homepage-team {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -385,6 +501,7 @@ nav a.active {
   width: 100%;
   max-width: 220px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .team-card:hover {
@@ -392,48 +509,160 @@ nav a.active {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
+/* Shared avatar styling */
+.member-photo,
+.team-photo {
+  border: 3px solid #1E5631;
+  box-shadow: 0 6px 18px rgba(30, 86, 49, 0.18);
+  background: #ffffff;
+}
+
+/* Default team photo size */
 .team-photo {
   width: 140px;
   height: 140px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 0.75rem;
-  background: #ffffff;
-  border: 3px solid #1E5631;
-  box-shadow: 0 6px 18px rgba(30, 86, 49, 0.18);
 }
 
-.team-name {
+/* Member cards */
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.member-card {
+  background: #f5f5f5;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.member-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.member-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.2rem;
+  margin-top: 0.75rem;
+}
+
+/* Slightly different shadow for non-PI cards */
+.member-card:not(.pi-profile) .member-photo {
+  box-shadow: 0 5px 14px rgba(30, 86, 49, 0.14);
+}
+
+.member-name {
+  font-size: 1.15rem;
   font-weight: 700;
-  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
+  max-width: 100%;
 }
 
-.team-role {
+.member-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.member-links img,
+.linkedin-inline img,
+.orcid-inline img,
+.scholar-inline img {
+  width: 14px;
+  height: 14px;
+  opacity: 0.8;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.member-links img:hover,
+.linkedin-inline img:hover,
+.orcid-inline img:hover,
+.scholar-inline img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.member-role {
   color: #1E5631;
   font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.member-affiliation {
   font-size: 0.9rem;
+  color: #555;
 }
 
-.pi-profile p {
-  max-width: none;
+.member-affiliation a {
+  color: #555;
+  text-decoration: none;
 }
 
-.pi-right {
-  text-align: left;
+.member-affiliation a:hover {
+  color: #1E5631;
+  text-decoration: underline;
 }
 
-.pi-right p {
-  max-width: none;
-  text-align: justify;
-  margin-bottom: 1rem;
-}
-
+/* PI feature card */
 .pi-profile {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  background: #f5f5f5;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 100%;
   max-width: 100%;
   box-sizing: border-box;
   margin: 2rem 0 3rem;
 }
 
+.pi-featured {
+  position: relative;
+  background: #f2f7f2;
+  border-left: 6px solid #1E5631;
+}
+
+.pi-profile .member-photo {
+  width: 210px;
+  height: 210px;
+  border: 5px solid #1E5631;
+  box-shadow: 0 12px 30px rgba(30, 86, 49, 0.35);
+}
+
+.pi-left {
+  text-align: center;
+}
+
+.pi-right {
+  text-align: justify;
+}
+
+.pi-right p {
+  margin-bottom: 1rem;
+}
+
+/* DAC company logos under PI bio */
 .dac-companies {
   display: grid;
   grid-template-columns: repeat(auto-fit, 220px);
@@ -483,140 +712,92 @@ nav a.active {
   max-height: 30px;
 }
 
-.funding-logos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  gap: 2.5rem;
-  max-width: 900px;
-  margin: 2.5rem auto 1.5rem;
-  padding: 0 1rem;
+/* Compact members grid (if needed elsewhere) */
+.members-grid.members-grid-compact {
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.2rem;
 }
 
-.funding-logos img {
-  height: 38px;
-  width: auto;
-  max-width: 100%;
-  flex-shrink: 1;
+.members-grid.members-grid-compact .member-card {
+  padding: 1.2rem 0.9rem;
+  max-width: 190px;
 }
 
-.funding-logos img.priority {
-  height: 48px;
-}
-
-@media (max-width: 600px) {
-  .funding-logos img {
-    height: 45px;
-  }
-}
-
-.member-name {
-  font-size: 1.15rem;
-  font-weight: 700;
-  text-align: center;
-  margin-top: 0.5rem;
-  margin-bottom: 0.25rem;
-  line-height: 1.3;
-  max-width: 100%;
-}
-
-.members-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-}
-
-.member-card {
-  background: #f5f5f5;
-  border-radius: 12px;
-  padding: 2rem 1.5rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.member-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-}
-
-.member-photo {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1.2rem;
-  margin-top: 0.75rem;
-  background: #ddd;
-  border: 3px solid #1E5631;
-  box-shadow: 0 6px 18px rgba(30, 86, 49, 0.18);
-}
-
-.member-card:not(.pi-profile) .member-photo {
-  box-shadow: 0 5px 14px rgba(30, 86, 49, 0.14);
-}
-
-.member-links {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
+.members-grid.members-grid-compact .member-photo {
+  width: 80px;
+  height: 80px;
   margin-bottom: 0.5rem;
 }
 
-.member-links img {
-  width: 14px;
-  height: 14px;
-  opacity: 0.8;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+.members-grid.members-grid-compact .member-name {
+  font-size: 0.95rem;
 }
 
-.member-links img:hover {
-  opacity: 1;
-  transform: scale(1.1);
+.members-grid.members-grid-compact .member-role {
+  font-size: 0.8rem;
 }
 
-.member-role {
-  color: #1E5631;
-  font-weight: 600;
-  margin-bottom: 0.3rem;
+.members-grid-single {
+  grid-template-columns: 1fr;
 }
 
-.member-affiliation {
-  font-size: 0.9rem;
-  color: #555;
+.project-team-note {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  opacity: 0.85;
 }
 
-.member-affiliation a {
-  color: #555;
-  text-decoration: none;
+/* =========================
+   C4C page
+   ========================= */
+.section.c4c-header {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 1.25rem;
+  padding-bottom: 3rem;
 }
 
-.member-affiliation a:hover {
-  color: #1E5631;
-  text-decoration: underline;
+.c4c-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
-.linkedin-inline img,
-.orcid-inline img,
-.scholar-inline img {
-  width: 14px;
-  height: 14px;
-  opacity: 0.8;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+.c4c-top h1 {
+  margin: 0;
 }
 
-.linkedin-inline img:hover,
-.orcid-inline img:hover,
-.scholar-inline img:hover {
-  opacity: 1;
-  transform: scale(1.1);
+.c4c-funder-logo {
+  height: 55px;
+  width: auto;
+  flex-shrink: 0;
+  display: block;
+  object-fit: contain;
 }
 
+.c4c-content {
+  margin: 0;
+  text-align: justify;
+}
+
+.c4c-content p {
+  margin: 0 0 1rem;
+}
+
+/* =========================
+   Water splitting page
+   ========================= */
+.water-splitting-content p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* =========================
+   Footer
+   ========================= */
 .site-footer {
   background: #1E5631;
   color: white;
@@ -638,62 +819,11 @@ nav a.active {
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   justify-content: center;
   align-items: flex-start;
   gap: 4rem;
-  text-align: left; 
-}
-
-.footer-contact,
-.footer-funding-block {
-  flex: 0 0 auto;
-}
-
-@media (max-width: 700px) {
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1.5rem;
-  }
-}
-
-.members-grid.members-grid-compact {
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1.2rem;
-}
-
-.members-grid.members-grid-compact .member-card {
-  padding: 1.2rem 0.9rem;
-  max-width: 190px;
-}
-
-.members-grid.members-grid-compact .member-photo {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 0.5rem;
-  border: 3px solid #1E5631;
-  box-shadow: 0 6px 18px rgba(30, 86, 49, 0.18);
-}
-
-.members-grid.members-grid-compact .member-name {
-  font-size: 0.95rem;
-}
-
-.members-grid.members-grid-compact .member-role {
-  font-size: 0.8rem;
-}
-
-.members-grid-compact {
-  margin-bottom: 1.2rem;
-}
-
-.project-team-note {
-  margin-top: 0.5rem;
-  margin-bottom: 0;
-  font-size: 0.95rem;
-  opacity: 0.85;
+  text-align: left;
 }
 
 .footer-contact {
@@ -758,15 +888,15 @@ nav a.active {
   align-items: center;
   justify-content: center;
   gap: 1.4rem;
-  flex-wrap: nowrap; 
+  flex-wrap: nowrap;
 }
 
 .footer-funding a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 130px; 
-  height: 52px; 
+  width: 130px;
+  height: 52px;
   background: #ffffff;
   border-radius: 6px;
   padding: 6px 8px;
@@ -789,12 +919,6 @@ nav a.active {
   transition: transform 0.2s ease;
 }
 
-@media (max-width: 900px) {
-  .footer-funding {
-    flex-wrap: wrap;
-  }
-}
-
 .footer-bottom {
   text-align: center;
   margin-top: 2rem;
@@ -802,47 +926,12 @@ nav a.active {
   opacity: 0.85;
 }
 
-@media (max-width: 700px) {
-  .footer-content {
-    flex-direction: column;
-    text-align: center;
-  }
+/* =========================
+   Responsive tweaks
+   ========================= */
 
-  .footer-contact {
-    justify-content: center;
-  }
-
-  .footer-funding {
-    flex-wrap: wrap;
-  }
-}
-
-.footer-funding a:hover img {
-  transform: scale(1.04);
-  transition: transform 0.2s ease;
-}
-
-header {
-  position: relative;
-}
-
-.nav-toggle {
-  display: none;
-  font-size: 1.8rem;
-  background: none;
-  border: 0;
-  cursor: pointer;
-  color: #1E5631;
-}
-
-.main-nav {
-  display: flex;
-  align-items: center;
-  gap: 1.8rem;
-}
-
+/* Nav + header mobile */
 @media (max-width: 768px) {
-
   header {
     flex-direction: column;
     align-items: stretch;
@@ -886,325 +975,8 @@ header {
   }
 }
 
-.members-grid-single {
-  grid-template-columns: 1fr;
-}
-
-.team-photo {
-  width: 110px;
-  height: 110px;
-}
-
-.pi-profile {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 2rem;
-  background: #f5f5f5;
-  align-items: center;
-  padding: 2rem;
-  border-radius: 12px;
-  width: 100%;
-}
-
-.pi-featured {
-  position: relative;
-  background: #f2f7f2;
-  border-left: 6px solid #1E5631;
-}
-
-.pi-profile .member-photo {
-  width: 210px;
-  height: 210px;
-  border: 5px solid #1E5631;
-  box-shadow: 0 12px 30px rgba(30, 86, 49, 0.35);
-}
-
-.member-photo,
-.team-photo {
-  border: 3px solid #1E5631;
-  box-shadow: 0 6px 18px rgba(30, 86, 49, 0.18);
-  background: #ffffff;
-}
-
-.member-card:hover .member-photo,
-.team-card:hover .team-photo {
-  transform: scale(1.03);
-  box-shadow: 0 10px 24px rgba(30, 86, 49, 0.28);
-}
-
-.pi-left {
-  text-align: center;
-}
-
-.pi-right {
-  text-align: justify;
-}
-
-.pi-right p {
-  margin-bottom: 1rem;
-}
-
-.member-photo {
-  margin-bottom: 1.2rem;
-  background: #ffffff;
-  border: 3px solid #1E5631;
-}
-
-@media (max-width: 700px) {
-  .pi-profile {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-}
-
+/* Hero mobile layout */
 @media (max-width: 600px) {
-  .member-photo {
-    width: 130px;
-    height: 130px;
-  }
-}
-
-.section.c4c-header {
-  max-width: 900px;
-  margin: 0 auto;
-  padding-top: 1.25rem;
-  padding-bottom: 3rem;
-}
-
-.c4c-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 1.25rem;
-}
-
-.c4c-funder-logo {
-  height: 55px;
-  width: auto;
-  flex-shrink: 0;
-  display: block;
-  object-fit: contain;
-}
-
-.c4c-top h1 {
-  margin: 0;
-}
-
-.c4c-content {
-  margin: 0;
-  text-align: justify;
-}
-
-.c4c-content p {
-  margin: 0 0 1rem;
-}
-
-@media (max-width: 768px) {
-  .section.c4c-header {
-    padding: 2rem 1.5rem 2.5rem;
-  }
-
-  .c4c-top {
-    flex-direction: column-reverse;
-    align-items: flex-start;
-    gap: 0.75rem;
-  }
-
-  .c4c-funder-logo {
-    height: 45px;
-    margin-bottom: 0.25rem;
-  }
-
-  .c4c-content {
-    text-align: left;
-  }
-}
-
-.water-splitting-content p {
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-.site-footer .footer-contact {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start !important;
-  text-align: left !important; 
-}
-
-#recent-publications {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-@media (max-width: 900px) {
-  #recent-publications {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 550px) {
-  #recent-publications {
-    grid-template-columns: 1fr;
-  }
-}
-
-.recent-pub-cta,
-.team-card-cta {
-  background: #f5f5f5;
-  border-radius: 12px;
-  padding: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.recent-pub-cta:hover,
-.team-card-cta:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-}
-
-.pub-cta-link,
-.team-cta-link {
-  text-decoration: none;
-  color: #1E5631;
-  font-weight: 700;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.6rem;
-}
-
-.team-cta-icon,
-.pub-cta-icon {
-  font-size: 0;
-  line-height: 0;
-}
-
-.team-cta-icon::before,
-.pub-cta-icon::before {
-  content: "→";
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1;
-}
-
-.team-cta-icon::before {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.pub-cta-link:hover .pub-cta-icon::before,
-.team-cta-link:hover .team-cta-icon::before {
-  transform: translateX(3px);
-  transition: transform 0.2s ease;
-}
-
-.pub-title,
-.pub-authors,
-.pub-info {
-  hyphens: auto;
-}
-
-.pub-doi-wrap {
-  margin-top: 1.1rem;
-  display: flex;
-  justify-content: center;
-}
-
-.pub-doi-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.3rem 0.85rem;
-  border-radius: 999px;
-  background: #ffffff;
-  text-decoration: none;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-}
-
-.pub-doi-button img {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-.pub-doi-text {
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  color: #1E5631;
-}
-
-.pub-doi-button:hover {
-  background: #e6f3e5;
-  transform: translateY(-1px);
-}
-
-@media (max-width: 500px) {
-  .pub-doi-button {
-    padding: 0.25rem 0.7rem;
-  }
-  .pub-doi-button img {
-    width: 22px;
-    height: 22px;
-  }
-}
-
-#recent-publications {
-  align-items: stretch;
-}
-
-.recent-pub-item,
-.recent-pub-cta {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.recent-pub-item {
-  display: flex;
-  flex-direction: column;
-}
-
-.recent-pub-item,
-.recent-pub-cta {
-  background: #f5f5f5;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-}
-
-.recent-pub-cta {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.logo-container {
-  text-decoration: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.logo-container .logo-text {
-  color: #1E5631;
-}
-
-@media (max-width: 600px) {
-
   .hero {
     position: relative;
     height: auto;
@@ -1259,19 +1031,75 @@ header {
     max-width: 260px;
     margin: 0 auto;
   }
-}
 
-@media (max-width: 600px) {
   .hero-title,
   .hero-subtitle {
     color: #0A1A0A;
   }
 }
 
+/* PI card + members scaling on smaller screens */
 @media (max-width: 700px) {
-  .site-footer .footer-contact {
-    align-items: center !important;
-    text-align: center !important;
+  .pi-profile {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .member-photo {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+/* C4C + footer + recent pubs responsiveness */
+@media (max-width: 768px) {
+  .section.c4c-header {
+    padding: 2rem 1.5rem 2.5rem;
+  }
+
+  .c4c-top {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .c4c-funder-logo {
+    height: 45px;
+    margin-bottom: 0.25rem;
+  }
+
+  .c4c-content {
+    text-align: left;
+  }
+}
+
+@media (max-width: 900px) {
+  #recent-publications {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-funding {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 550px) {
+  #recent-publications {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Footer stacking + contact alignment */
+@media (max-width: 700px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-contact {
+    align-items: center;
+    text-align: center;
   }
 
   .footer-contact-item {
@@ -1285,6 +1113,19 @@ header {
     margin-bottom: 1.5rem;
   }
 }
+
+/* Smaller DOI button on very small screens */
+@media (max-width: 500px) {
+  .pub-doi-button {
+    padding: 0.25rem 0.7rem;
+  }
+
+  .pub-doi-button img {
+    width: 22px;
+    height: 22px;
+  }
+}
+
 
 
 
