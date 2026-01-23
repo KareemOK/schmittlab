@@ -534,9 +534,6 @@ nav a.active {
   box-shadow: 0 5px 14px rgba(30, 86, 49, 0.14);
 }
 
-
-/* === Force correct styling for team cards everywhere === */
-
 .members-grid .team-name,
 .member-card .team-name,
 .homepage-team .team-name {
@@ -555,7 +552,6 @@ nav a.active {
   text-align: center;
 }
 
-/* Make sure card text doesn't inherit weird justification */
 .member-card .team-name,
 .member-card .team-role {
   text-align: center;
@@ -1098,6 +1094,7 @@ nav a.active {
     height: 22px;
   }
 }
+
 
 
 
