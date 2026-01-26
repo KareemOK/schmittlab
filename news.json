@@ -1,4 +1,10 @@
 [
+    {
+    "date": "2026-01-23",
+    "title": "Congrats Dr. Manning",
+    "text": "Huge congratulations to Gearóid, who finished his PhD viva today!",
+    "image": "assets/gearoid-h.jpg"
+  },
   {
     "date": "2026-01-17",
     "title": "New group website launched",
@@ -26,6 +32,7 @@
     "image": "assets/news/Wolfgang.png"
   }
 ]
+
 
 
 
