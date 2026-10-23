@@ -1289,6 +1289,55 @@ nav a.active {
   color: #555;
 }
 
+/* Research-area filter chips */
+.pub-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 1rem 0 0;
+}
+
+.pub-topic {
+  padding: 0.35rem 0.8rem;
+  border: 1px solid #cfd8cf;
+  border-radius: 999px;
+  background: #fff;
+  color: #1E5631;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pub-topic span {
+  font-weight: 500;
+  color: #666;
+}
+
+.pub-topic:hover {
+  border-color: #1E5631;
+}
+
+.pub-topic.is-active {
+  background: #1E5631;
+  border-color: #1E5631;
+  color: #fff;
+}
+
+.pub-topic.is-active span {
+  color: #d6e8d6;
+}
+
+/* Key publications on research/project pages (those pages justify body text) */
+.related-pubs,
+.related-pubs p {
+  text-align: left;
+}
+
+.related-pubs .pub-entries {
+  margin-bottom: 0.25rem;
+}
+
 .pub-years {
   display: flex;
   flex-wrap: wrap;

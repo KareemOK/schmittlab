@@ -1,0 +1,21 @@
+# Checks news.json, members.json, publication topics and every image/file link on each push.
+# A red ✗ on the commit means something would show up broken on the site; the log says what.
+name: Site checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check data files and links
+        run: python .github/check_site.py

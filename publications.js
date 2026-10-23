@@ -1,37 +1,38 @@
 // Publications page: every paper from publications.json, grouped by year,
-// with a search box and a jump-to-year bar.
-// The search is kept in the address (?q=...) so a filtered list can be shared.
+// with a search box, research-area filter chips and a jump-to-year bar.
+// The search and area are kept in the address (?q=...&topic=...) so a filtered list can be shared.
 
 document.addEventListener("DOMContentLoaded", () => {
   const list = document.getElementById("pub-list");
   const search = document.getElementById("pub-search");
   const countEl = document.getElementById("pub-count");
+  const topicBar = document.getElementById("pub-topics");
   const yearNav = document.getElementById("pub-years");
   const errorBox = document.getElementById("pub-error");
   if (!list) return;
 
-  const { escapeHtml, fold, formatAuthors, authorsHtml, titleText,
-          linkedTitleHtml, detailsHtml, doiButtonHtml } = window.PubFormat;  // publication-format.js
-
-  function renderPaper(pub) {
-    const authors = authorsHtml(pub.authors || "");
-    return `
-      <li class="pub-entry">
-        <p class="pub-entry-title">${linkedTitleHtml(pub)}</p>
-        ${authors ? `<p class="pub-entry-authors">${authors}</p>` : ""}
-        <p class="pub-entry-details">
-          <span class="pub-citation">${detailsHtml(pub)}</span>
-          ${doiButtonHtml(pub)}
-        </p>
-      </li>`;
-  }
+  const { TOPICS, escapeHtml, fold, formatAuthors, titleText, entryHtml, newestFirst } =
+    window.PubFormat;  // publication-format.js
 
   let papers = [];
+  let topic = new URLSearchParams(location.search).get("topic") || "";
+
+  function renderTopicBar() {
+    if (!topicBar) return;
+    const counts = {};
+    papers.forEach(p => (p.pub.topics || []).forEach(t => { counts[t] = (counts[t] || 0) + 1; }));
+    const chip = (key, label, n) =>
+      `<button type="button" class="pub-topic${key === topic ? " is-active" : ""}" data-topic="${escapeHtml(key)}"
+               aria-pressed="${key === topic}">${escapeHtml(label)}${n == null ? "" : ` <span>${n}</span>`}</button>`;
+    topicBar.innerHTML = chip("", "All areas") +
+      Object.entries(TOPICS).filter(([key]) => counts[key]).map(([key, label]) => chip(key, label, counts[key])).join("");
+  }
 
   function render() {
     const query = fold(search ? search.value.trim() : "");
     const words = query.split(/\s+/).filter(Boolean);
-    const matches = papers.filter(p => words.every(w => p.searchText.includes(w)));
+    const matches = papers.filter(p =>
+      (!topic || (p.pub.topics || []).includes(topic)) && words.every(w => p.searchText.includes(w)));
 
     // group by year, newest first
     const byYear = new Map();
@@ -48,11 +49,11 @@ document.addEventListener("DOMContentLoaded", () => {
         </h2>
         <ol class="pub-entries">${group.map(p => p.html).join("")}</ol>
       </section>`).join("")
-      || `<p class="pub-empty">No publications match “${escapeHtml(search.value.trim())}”.</p>`;
+      || `<p class="pub-empty">No publications match${words.length ? ` “${escapeHtml(search.value.trim())}”` : ""}${topic ? ` in ${escapeHtml(TOPICS[topic] || topic)}` : ""}.</p>`;
 
     if (countEl) {
-      countEl.textContent = words.length
-        ? `${matches.length} of ${papers.length} publications match`
+      countEl.textContent = words.length || topic
+        ? `${matches.length} of ${papers.length} publications`
         : `${papers.length} publications`;
     }
 
@@ -65,8 +66,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function syncAddress() {
     const url = new URL(location.href);
-    const q = search.value.trim();
+    const q = search ? search.value.trim() : "";
     if (q) url.searchParams.set("q", q); else url.searchParams.delete("q");
+    if (topic) url.searchParams.set("topic", topic); else url.searchParams.delete("topic");
     history.replaceState(null, "", url);
   }
 
@@ -76,19 +78,28 @@ document.addEventListener("DOMContentLoaded", () => {
       return res.json();
     })
     .then(items => {
-      const yearNum = p => parseInt(p.year, 10) || 0;
-      papers = [...items]
-        .sort((a, b) => yearNum(b) - yearNum(a))
-        .map(pub => ({
-          pub,
-          html: renderPaper(pub),
-          searchText: fold([titleText(pub.title || ""), pub.authors, formatAuthors(pub.authors || "").join(" "),
-                            pub.journal, pub.year, pub.doi].join(" ")),
-        }));
+      papers = newestFirst(items).map(pub => ({
+        pub,
+        html: entryHtml(pub),
+        searchText: fold([titleText(pub.title || ""), pub.authors, formatAuthors(pub.authors || "").join(" "),
+                          pub.journal, pub.year, pub.doi].join(" ")),
+      }));
+
+      // ignore an unknown ?topic= rather than showing an empty page
+      if (!papers.some(p => (p.pub.topics || []).includes(topic))) topic = "";
+      renderTopicBar();
 
       if (search) {
         search.value = new URLSearchParams(location.search).get("q") || "";
         search.addEventListener("input", () => { render(); syncAddress(); });
+      }
+      if (topicBar) {
+        topicBar.addEventListener("click", e => {
+          const btn = e.target.closest("[data-topic]");
+          if (!btn) return;
+          topic = btn.dataset.topic === topic ? "" : btn.dataset.topic;
+          renderTopicBar(); render(); syncAddress();
+        });
       }
       render();
 

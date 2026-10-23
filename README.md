@@ -44,3 +44,46 @@ Don't edit `publications.json` by hand: it is overwritten on every rebuild.
 
 If the Action fails (a red ✗ on the Actions tab), an entry in `publications.bib` has a typo,
 usually a missing `}`; the site keeps showing the previous list until it's fixed.
+
+## Group members
+
+Everyone on the Members page, the home page's "Meet the Team" and the project pages' team
+sections comes from `members.json`. Each person looks like this (only `name`, `role` and
+`group` are required):
+
+```json
+{
+  "name": "Dr. Jane Doe",
+  "role": "Postdoctoral Researcher",
+  "group": "postdoc",
+  "photo": "assets/jane.jpg",
+  "email": "doej@tcd.ie",
+  "orcid": "https://orcid.org/0000-0000-0000-0000",
+  "linkedin": "https://www.linkedin.com/in/janedoe/",
+  "scholar": "https://scholar.google.com/citations?user=XXXX",
+  "home": "Postdoctoral Researcher",
+  "projects": { "c4c": "Postdoctoral Researcher" }
+}
+```
+
+- `group` is `pi`, `postdoc` or `phd`, which decides the section on the Members page.
+- Leave out `photo` and the "?" placeholder is shown.
+- `home` (optional) puts the person on the home page, with that role.
+- `projects` (optional) puts them in a project page's team, with the role shown there.
+  Projects: `c4c`, `water-splitting`, `air-in-motion`, `synaergy`.
+- The order in the file is the order on the page.
+
+## Research areas
+
+Each paper in `publications.bib` can have a `topics` line, e.g. `topics = {catalysis, mofs},`.
+These drive the filter chips on the Publications page and the "Key Publications" lists on
+project pages. Topics: `catalysis`, `co2-capture`, `mofs`, `supramolecular`, `clusters`,
+`magnetism`, `luminescence`, `nanomaterials`, plus the project tag `c4c` for papers from
+the C4C-Capture project (listed on the C4C page). New topics are added in `publication-format.js`.
+
+## Automatic checks
+
+On every commit, GitHub checks `news.json`, `members.json`, the publication topics and every
+image/file link on the site. A red ✗ next to a commit means something would look broken;
+click it, then "Site checks", to see exactly what (e.g. a missing comma, or a photo filename
+with the wrong capital letters). Fix it and commit again.

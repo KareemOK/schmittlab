@@ -33,6 +33,8 @@ for entry in bib_db.entries:
     pages   = entry.get("pages", "")
     doi     = entry.get("doi", "")
     url     = entry.get("url", "")
+    # research areas, e.g. "catalysis, mofs" (the list is in publication-format.js)
+    topics  = [t.strip() for t in entry.get("topics", "").split(",") if t.strip()]
 
     pub_obj = {
         "year": year,
@@ -46,6 +48,7 @@ for entry in bib_db.entries:
     }
     # restore literal braces only now, after .strip("{}") above
     pub_obj = {k: v.replace(LBRACE, "{").replace(RBRACE, "}") for k, v in pub_obj.items()}
+    pub_obj["topics"] = topics
 
     publications.append(pub_obj)
 

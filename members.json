@@ -1,0 +1,113 @@
+[
+  {
+    "name": "Prof. Wolfgang Schmitt",
+    "role": "Principal Investigator",
+    "group": "pi",
+    "photo": "assets/Wolfgang.png",
+    "email": "schmittw@tcd.ie",
+    "orcid": "https://orcid.org/0000-0002-0058-9404",
+    "linkedin": "https://www.linkedin.com/in/wolfgang-schmitt-7b36a733/",
+    "home": "Principal Investigator",
+    "projects": {
+      "air-in-motion": "Principal Investigator",
+      "synaergy": "Co-Founder & Director"
+    },
+    "bio": "Wolfgang Schmitt is a Professor in the School of Chemistry at Trinity College Dublin. He studied Chemistry at the Technical University Darmstadt (TU), Germany and graduated as Dipl. Ing. (Chemistry) in 1999. From 2002-2003 he worked as a postdoctoral fellow at the Royal Institution of Great Britain and in 2003 he was selected to join the International Centre for Young Scientists at the National Institute for Materials Sciences in Japan as an independent research fellow. During his time at TCD, he received research funding in excess of 6 million Euro as sole PI from the European Research Council (ERC Consolidator and Proof-of-Concept grants), Science Foundation Ireland (Principal Investigator, TIDA, RFP and Challenge grants), the Environmental Protection Agency, the Irish Research Council and Enterprise Ireland. He published in internationally recognized, journals, such as Nat. Commun., Angew.Chem. Int. Ed., Chem. Commun., J. Am. Chem. Soc., Chem. Sci. Wolfgang's research focuses on synthetic coordination chemistry and supramolecular chemistry of hybrid organic-inorganic materials aiming to exploit these materials for sustainable energy applications (H<sub>2</sub>-based energy systems, water splitting), catalysis, and CO<sub>2</sub> capture."
+  },
+  {
+    "name": "Dr. Sebastien Vaesen",
+    "role": "Technical Lead",
+    "group": "postdoc",
+    "photo": "assets/seb.jpg",
+    "email": "vaesens@tcd.ie",
+    "orcid": "https://orcid.org/0000-0002-0823-9564",
+    "linkedin": "https://www.linkedin.com/in/sebastien-vaesen/",
+    "scholar": "https://scholar.google.com/citations?user=Z5YpZ1AAAAAJ&hl=en&oi=ao",
+    "home": "Postdoctoral Researcher",
+    "projects": {
+      "air-in-motion": "Technical Lead",
+      "synaergy": "Co-Founder & CTO"
+    }
+  },
+  {
+    "name": "Dr. Gearóid Manning",
+    "role": "Postdoctoral Researcher",
+    "group": "postdoc",
+    "email": "gemannin@tcd.ie",
+    "orcid": "https://orcid.org/0000-0002-9232-6029",
+    "linkedin": "https://www.linkedin.com/in/gearoidmanning/",
+    "projects": {
+      "water-splitting": "Postdoctoral Researcher"
+    }
+  },
+  {
+    "name": "Dr. Navaneetha Tokala",
+    "role": "Postdoctoral Researcher",
+    "group": "postdoc",
+    "email": "tokalan@tcd.ie",
+    "orcid": "https://orcid.org/0009-0009-6332-5615",
+    "linkedin": "https://www.linkedin.com/in/dr-navaneetha-tokala-584100365/",
+    "projects": {
+      "c4c": "Postdoctoral Researcher"
+    }
+  },
+  {
+    "name": "Dr. Athira Ravi",
+    "role": "Postdoctoral Researcher",
+    "group": "postdoc",
+    "email": "aravi@tcd.ie",
+    "orcid": "https://orcid.org/0000-0002-8244-1082",
+    "linkedin": "https://www.linkedin.com/in/athira-ravi-0b7472248/",
+    "scholar": "https://scholar.google.com/citations?user=gWny9_4AAAAJ&hl=en&oi=ao",
+    "projects": {
+      "water-splitting": "Postdoctoral Researcher"
+    }
+  },
+  {
+    "name": "Dr. Elham Katoueizadeh",
+    "role": "Project Development",
+    "group": "postdoc",
+    "email": "katoueie@tcd.ie",
+    "orcid": "https://orcid.org/0000-0001-7515-9487",
+    "linkedin": "https://www.linkedin.com/in/ekatouei/",
+    "scholar": "https://scholar.google.com/citations?user=xeH1AHsAAAAJ&hl=en&oi=ao",
+    "projects": {
+      "air-in-motion": "Project Development"
+    }
+  },
+  {
+    "name": "Claire Bradley",
+    "role": "PhD Researcher",
+    "group": "phd",
+    "email": "clbradle@tcd.ie",
+    "orcid": "https://orcid.org/0009-0004-5074-6991",
+    "linkedin": "https://www.linkedin.com/in/claire-bradley-53a661253/",
+    "projects": {
+      "water-splitting": "PhD Researcher"
+    }
+  },
+  {
+    "name": "Kareem Ouhalla Knipschild",
+    "role": "PhD Researcher",
+    "group": "phd",
+    "email": "ouhallak@tcd.ie",
+    "orcid": "https://orcid.org/0009-0001-1235-9796",
+    "linkedin": "https://www.linkedin.com/in/kareem-knipschild/",
+    "scholar": "https://scholar.google.com/citations?user=eIAkH3oAAAAJ&hl=en&oi=ao",
+    "projects": {
+      "c4c": "PhD Researcher"
+    }
+  },
+  {
+    "name": "Rebeka Juríčková",
+    "role": "PhD Researcher",
+    "group": "phd",
+    "photo": "assets/rj6.jpeg",
+    "email": "jurickor@tcd.ie",
+    "orcid": "https://orcid.org/0009-0003-9765-443X",
+    "linkedin": "https://www.linkedin.com/in/rebeka-jur%C3%AD%C4%8Dkov%C3%A1-35216b426/",
+    "projects": {
+      "c4c": "PhD Researcher"
+    }
+  }
+]

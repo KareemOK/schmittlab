@@ -33,6 +33,52 @@
         rel="stylesheet">
   <link href="styles.css" rel="stylesheet" />
 
+  <!-- Describes the group to search engines (schema.org); not shown on the page -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ResearchOrganization",
+    "name": "Schmitt Group",
+    "url": "https://schmittlab.com/",
+    "logo": "https://schmittlab.com/assets/apple-touch-icon.png",
+    "image": "https://schmittlab.com/assets/og-preview.jpg",
+    "description": "Inorganic and materials chemistry research group at Trinity College Dublin, working on catalytic water splitting and direct air capture of CO2 using metal-organic frameworks, coordination cages and carbon nanomaterials.",
+    "email": "schmittw@tcd.ie",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "School of Chemistry, Trinity College Dublin",
+      "addressLocality": "Dublin",
+      "addressCountry": "IE"
+    },
+    "parentOrganization": {
+      "@type": "CollegeOrUniversity",
+      "name": "Trinity College Dublin",
+      "url": "https://www.tcd.ie"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Wolfgang Schmitt",
+      "honorificPrefix": "Prof.",
+      "jobTitle": "Professor of Chemistry",
+      "sameAs": [
+        "https://orcid.org/0000-0002-0058-9404"
+      ]
+    },
+    "knowsAbout": [
+      "Water splitting",
+      "Electrocatalysis",
+      "Direct air capture",
+      "CO2 capture",
+      "Metal-organic frameworks",
+      "Supramolecular chemistry",
+      "Coordination cages",
+      "Polyoxometalates",
+      "Molecular magnetism",
+      "Carbon nanomaterials"
+    ]
+  }
+  </script>
+
 </head>
 
 <body>
@@ -85,19 +131,7 @@
   <section class="section">
     <h2>Meet the Team</h2>
 
-    <div class="homepage-team">
-      <div class="team-card">
-        <img loading="lazy" src="assets/Wolfgang.png" class="team-photo" alt="Prof. Wolfgang Schmitt">
-        <div class="team-name">Prof. Wolfgang Schmitt</div>
-        <div class="team-role">Principal Investigator</div>
-      </div>
-
-      <div class="team-card">
-        <img loading="lazy" src="assets/seb.jpg" class="team-photo" alt="Dr. Sebastien Vaesen">
-        <div class="team-name">Dr. Sebastien Vaesen</div>
-        <div class="team-role">Postdoctoral Researcher</div>
-      </div>
-
+    <div class="homepage-team" data-home>
      <div class="team-card team-card-cta">
        <a href="members.html" class="team-cta-link">
        <div class="team-cta-icon">➜</div>
@@ -108,6 +142,8 @@
   </section>
 
   <div id="site-footer"></div>
+
+  <script src="members.js"></script>
 
 <script src="news.js"></script>
   <script src="publication-format.js"></script>

@@ -6,6 +6,20 @@ window.PubFormat = (() => {
   // Group leader's name is shown in bold in every author list
   const HIGHLIGHT_AUTHOR = "Schmitt, W.";
 
+  // Research areas, used as `topics = {catalysis, mofs}` in publications.bib.
+  // Project tags (like c4c) list a paper on that project's page.
+  const TOPICS = {
+    "catalysis": "Catalysis & water splitting",
+    "co2-capture": "CO₂ capture",
+    "mofs": "MOFs & coordination polymers",
+    "supramolecular": "Supramolecular chemistry",
+    "clusters": "Clusters & polyoxometalates",
+    "magnetism": "Molecular magnetism",
+    "luminescence": "Luminescence & sensing",
+    "nanomaterials": "Nanomaterials",
+    "c4c": "C4C-Capture project",
+  };
+
   const escapeHtml = (str = "") =>
     String(str)
       .replace(/&/g, "&amp;")
@@ -92,5 +106,23 @@ window.PubFormat = (() => {
       : "";
   }
 
-  return { escapeHtml, fold, formatAuthors, authorsHtml, titleText, linkedTitleHtml, detailsHtml, doiButtonHtml };
+  // One <li> in a list of papers (publications page and project pages)
+  function entryHtml(pub) {
+    const authors = authorsHtml(pub.authors || "");
+    return `
+      <li class="pub-entry">
+        <p class="pub-entry-title">${linkedTitleHtml(pub)}</p>
+        ${authors ? `<p class="pub-entry-authors">${authors}</p>` : ""}
+        <p class="pub-entry-details">
+          <span class="pub-citation">${detailsHtml(pub)}</span>
+          ${doiButtonHtml(pub)}
+        </p>
+      </li>`;
+  }
+
+  const yearNum = pub => parseInt(pub.year, 10) || 0;
+  const newestFirst = pubs => [...pubs].sort((a, b) => yearNum(b) - yearNum(a));
+
+  return { TOPICS, escapeHtml, fold, formatAuthors, authorsHtml, titleText, linkedTitleHtml,
+           detailsHtml, doiButtonHtml, entryHtml, newestFirst };
 })();
