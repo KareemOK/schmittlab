@@ -17,7 +17,8 @@
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&display=swap"></noscript>
   <link href="styles.css" rel="stylesheet" />
 
 <meta property="og:type" content="website" />
@@ -33,6 +34,8 @@
 
   <div id="site-header"></div>
   <script src="layout.js"></script>
+
+  <main>
 
   <section class="section water-splitting-content">
 
@@ -79,12 +82,14 @@ Hydrogen is widely regarded as a cornerstone of future green energy systems, due
 
 </section>
 
-<div id="site-footer"></div>
+  </main>
 
-  <script src="publication-format.js"></script>
-  <script src="related-publications.js"></script>
+  <div id="site-footer"></div>
 
-  <script src="members.js"></script>
+  <script src="publication-format.js" defer></script>
+  <script src="related-publications.js" defer></script>
+
+  <script src="members.js" defer></script>
 
 </body>
 

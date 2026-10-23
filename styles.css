@@ -146,7 +146,7 @@ nav a.active {
 }
 
 .hero-button {
-  background: #6BBF59;
+  background: #2E7D32;  /* 5.1:1 contrast with white text */
   color: white;
   padding: 0.9rem 1.6rem;
   border-radius: 8px;
@@ -159,7 +159,7 @@ nav a.active {
 }
 
 .hero-button:hover {
-  background: #5aa34f;
+  background: #256628;
   transform: translateY(-2px);
 }
 
@@ -209,7 +209,7 @@ nav a.active {
 .button {
   display: inline-block;
   padding: 0.8rem 1.5rem;
-  background: #6BBF59;
+  background: #2E7D32;  /* 5.1:1 contrast with white text */
   color: white;
   margin-top: 1.5rem;
   border-radius: 6px;
@@ -219,7 +219,7 @@ nav a.active {
 }
 
 .button:hover {
-  background: #5aa34f;
+  background: #256628;
   transform: translateY(-2px);
 }
 
