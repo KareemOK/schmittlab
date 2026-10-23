@@ -56,5 +56,12 @@
      "image": "assets/news/ce-iii.png",
      "link": "https://www.tandfonline.com/doi/full/10.1080/14686996.2026.2694962",
      "tags": ["water-splitting", "H2 evolution", "MOF"]
+  },
+  {
+     "date": "2026-10-21",
+     "title": "Global Bioeconomy Summit Poster",
+     "text": "This week, Rebeka and Kareem presented their poster on the C4C-capture project at the Global Bioeconomy Summit 2026!",
+     "image": "assets/news/gbs-poster.jpg",
+     "tags": ["dac", "direct air capture", "c4c"]
   }
 ]
