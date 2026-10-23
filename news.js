@@ -42,14 +42,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const imageStyle = item.focus ? ` style="object-position: ${item.focus}"` : "";
         const imageHtml = item.image
           ? `<div class="${wrapClass}" style="--news-image: url('${item.image}')">
-               <img src="${item.image}" class="news-image"${imageStyle} alt="">
+               <img src="${item.image}" class="news-image"${imageStyle} alt="${altText(item)}">
              </div>`
           : "";
 
         div.innerHTML = `
           ${imageHtml}
           <div class="news-body">
-            <div class="news-date">${new Date(item.date).toLocaleDateString()}</div>
+            <div class="news-date">${formatDate(item.date)}</div>
             <div class="news-title">${item.title}</div>
             <div class="news-text">${item.text}</div>
             ${item.link ? `<a href="${item.link}" class="news-link">Read more →</a>` : ""}
@@ -63,4 +63,17 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error(error);
       container.innerHTML = "<p>Unable to load news.</p>";
     });
+
+  // Same date format for every visitor, e.g. "21 Oct 2026"
+  function formatDate(iso) {
+    return new Date(iso).toLocaleDateString("en-GB", {
+      day: "numeric", month: "short", year: "numeric", timeZone: "UTC"
+    });
+  }
+
+  // Screen-reader text: the optional "alt" field, otherwise the title without HTML tags
+  function altText(item) {
+    const text = item.alt || item.title.replace(/<[^>]*>/g, "");
+    return text.replace(/"/g, "&quot;");
+  }
 });
