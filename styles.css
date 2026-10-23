@@ -416,29 +416,21 @@ nav a.active {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
-.recent-pub-item .pub-title {
-  font-weight: 700;
-  margin-bottom: 0.3rem;
+/* Cards use the same .pub-entry-* text styles as the publications page */
+.recent-pub-item p {
+  margin: 0;
 }
 
-.recent-pub-item .pub-authors {
-  font-size: 0.95rem;
-  color: #333;
-  margin-bottom: 0.25rem;
+.recent-pub-item {
+  justify-content: flex-start;   /* DOI sits right under the citation, not at the card bottom */
 }
 
-.recent-pub-item .pub-info {
-  font-size: 0.9rem;
-  color: #555;
+.recent-pub-doi {
+  margin-top: 0.9rem;
+  text-align: center;
 }
 
-.recent-pub-item,
-.recent-pub-item .pub-title,
-.recent-pub-item .pub-authors,
-.recent-pub-item .pub-info,
-.pub-title,
-.pub-authors,
-.pub-info {
+.recent-pub-item {
   hyphens: auto;
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
@@ -487,43 +479,6 @@ nav a.active {
 .team-cta-link:hover .team-cta-icon::before {
   transform: translateX(3px);
   transition: transform 0.2s ease;
-}
-
-.pub-doi-wrap {
-  margin-top: 1.1rem;
-  display: flex;
-  justify-content: center;
-}
-
-.pub-doi-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.3rem 0.85rem;
-  border-radius: 999px;
-  background: #ffffff;
-  text-decoration: none;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-}
-
-.pub-doi-button img {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-.pub-doi-text {
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  color: #1E5631;
-}
-
-.pub-doi-button:hover {
-  background: #e6f3e5;
-  transform: translateY(-1px);
 }
 
 .homepage-team {
@@ -1265,17 +1220,6 @@ nav a.active {
 @media (max-width: 600px) {
   .footer-contact {
     margin-bottom: 1.5rem;
-  }
-}
-
-@media (max-width: 500px) {
-  .pub-doi-button {
-    padding: 0.25rem 0.7rem;
-  }
-
-  .pub-doi-button img {
-    width: 22px;
-    height: 22px;
   }
 }
 
