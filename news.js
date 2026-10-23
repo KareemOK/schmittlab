@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!container) return;
 
   const tag = container.dataset.tag || null;
-  const limit = tag ? Infinity : 3;
+  const limit = 3;
 
   fetch("news.json?v=1")
     .then(response => {
