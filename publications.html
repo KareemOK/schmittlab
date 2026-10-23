@@ -40,158 +40,26 @@
   <section class="section" aria-labelledby="publications-heading">
     <h1 id="publications-heading">Publications</h1>
 
-    <ul class="pub-list" id="pub-list" aria-live="polite"></ul>
+    <div class="pub-toolbar">
+      <label for="pub-search" class="visually-hidden">Search publications</label>
+      <input type="search" id="pub-search" class="pub-search"
+             placeholder="Search by title, author, journal, year or DOI" autocomplete="off">
+      <p class="pub-count" id="pub-count" aria-live="polite"></p>
+    </div>
 
-    <div id="pub-error"
-         role="alert"
-         style="display:none; margin-top:1rem; padding:1rem; background:#fff3cd; border-radius:8px;">
-      Could not load publications. Please check that <code>publications.json</code> is in the same folder as <code>publications.html</code>.
+    <nav class="pub-years" id="pub-years" aria-label="Jump to year"></nav>
+
+    <div id="pub-list" class="pub-list"></div>
+
+    <div id="pub-error" class="pub-error" role="alert" hidden>
+      Could not load publications. Please try refreshing the page.
     </div>
   </section>
 </main>
 
   <div id="site-footer"></div>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const container = document.getElementById("pub-list");
-  const errorBox = document.getElementById("pub-error");
-  if (!container) return;
-
-  const escapeHtml = (str = "") =>
-    String(str)
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;")
-      .replace(/'/g, "&#039;");
-
-  function formatAuthorsInitials(str = "") {
-  return str.split(/\s+and\s+/).map(author => {
-    author = author.trim();
-    if (!author) return "";
-
-    if (author.includes(",")) {
-      const parts = author.split(",");
-      const last = parts[0].trim();
-      const rest = parts.slice(1).join(" ").trim();
-      if (!rest) return last;
-
-      const initials = rest.split(/\s+/).map(tok => {
-        tok = tok.replace(/\.$/, "");
-        return tok[0].toUpperCase() + ".";
-      }).join(" ");
-
-      return `${last}, ${initials}`.replace(/\.+$/, "");
-    }
-
-    const tokens = author.split(/\s+/).filter(Boolean);
-    if (tokens.length === 1) {
-      // single-name mononym, keep as-is
-      return tokens[0];
-    }
-
-    const last = tokens[tokens.length - 1];
-    const firsts = tokens.slice(0, -1);
-
-    const initials = firsts.map(tok => {
-      tok = tok.replace(/\.$/, "");
-      return tok[0].toUpperCase() + ".";
-    }).join(" ");
-
-    return `${last}, ${initials}`.replace(/\.+$/, "");
-  }).filter(Boolean).join("; ");
-}
-
-  const buildCitation = (pub) => {
-    const authors = formatAuthorsInitials(pub.authors || "");
-    let parts = [];
-
-    if (authors) {
-      parts.push(escapeHtml(authors) + ".");
-    }
-
-    if (pub.title) {
-      parts.push(escapeHtml(pub.title) + ".");
-    }
-
-    const journalBits = [];
-
-    if (pub.journal) {
-      journalBits.push(`<em>${escapeHtml(pub.journal)}</em>`);
-    }
-
-    if (pub.year) {
-      journalBits.push(`<strong>${escapeHtml(pub.year)}</strong>`);
-    }
-
-    const volIssue = [];
-    if (pub.volume) {
-      volIssue.push(escapeHtml(pub.volume));
-    }
-
-    const issue = pub.issue || pub.number;
-    if (issue) {
-      volIssue.push("(" + escapeHtml(issue) + ")");
-    }
-
-    if (volIssue.length) {
-      journalBits.push(volIssue.join(" "));
-    }
-
-    if (pub.pages) {
-      journalBits.push(escapeHtml(pub.pages));
-    }
-
-    if (journalBits.length) {
-      parts.push(journalBits.join(", ") + ".");
-    }
-
-    if (pub.doi) {
-      const doi = escapeHtml(pub.doi.trim());
-      parts.push(
-        `DOI: <a href="https://doi.org/${doi}" target="_blank" rel="noopener noreferrer">${doi}</a>.`
-      );
-    }
-
-    return parts.join(" ");
-  };
-
-  // Add ?cb=... so we always get the latest JSON
-  fetch("publications.json?cb=" + Date.now())
-    .then(res => {
-      if (!res.ok) throw new Error("Failed to load publications.json");
-      return res.json();
-    })
-    .then(items => {
-      if (!Array.isArray(items) || items.length === 0) {
-        container.innerHTML = "<li>No publications found.</li>";
-        return;
-      }
-
-      const sorted = [...items].sort(
-        (a, b) => parseInt(b.year || "0", 10) - parseInt(a.year || "0", 10)
-      );
-
-      sorted.forEach(pub => {
-        const li = document.createElement("li");
-        li.className = "publication-item";
-
-        const citationHTML = buildCitation(pub);
-
-        li.innerHTML = `
-          <p class="pub-citation">${citationHTML}</p>
-        `;
-
-        container.appendChild(li);
-      });
-    })
-    .catch(err => {
-      console.error(err);
-      if (errorBox) errorBox.style.display = "block";
-    });
-});
-</script>
+<script src="publications.js"></script>
 
 </body>
 </html>

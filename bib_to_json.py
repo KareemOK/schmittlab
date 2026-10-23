@@ -8,9 +8,12 @@ from bibtexparser.customization import convert_to_unicode
 with open("publications.bib", encoding="utf-8") as f:
     bib_text = f.read()
 
+# Literal braces in chemistry, e.g. \{Mn<sub>6</sub>\}, would otherwise be stripped
+# by the parser: swap them for placeholders and restore them afterwards.
+LBRACE, RBRACE = "", ""
 parser = BibTexParser(common_strings=True)
 parser.customization = convert_to_unicode
-bib_db = bibtexparser.loads(bib_text, parser=parser)
+bib_db = bibtexparser.loads(bib_text.replace(r"\{", LBRACE).replace(r"\}", RBRACE), parser=parser)
 
 # A typo in the .bib (e.g. a missing brace) can make the parser silently skip
 # entries. Stop rather than publish a shorter list.
@@ -41,6 +44,8 @@ for entry in bib_db.entries:
         "doi": doi,
         "link": url or (f"https://doi.org/{doi}" if doi else "")
     }
+    # restore literal braces only now, after .strip("{}") above
+    pub_obj = {k: v.replace(LBRACE, "{").replace(RBRACE, "}") for k, v in pub_obj.items()}
 
     publications.append(pub_obj)
 

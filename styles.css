@@ -1316,3 +1316,161 @@ nav a.active {
   color: #1E5631;
   font-weight: 600;
 }
+
+/* ---------- PUBLICATIONS PAGE ---------- */
+.pub-toolbar {
+  margin-top: 1.25rem;
+}
+
+.pub-search {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.75rem 1rem;
+  font: inherit;
+  font-size: 1rem;
+  border: 1px solid #cfd8cf;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.pub-search:focus {
+  outline: none;
+  border-color: #1E5631;
+  box-shadow: 0 0 0 3px rgba(30, 86, 49, 0.15);
+}
+
+.pub-count {
+  margin: 0.6rem 0 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.pub-years {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 1rem 0 0.5rem;
+}
+
+@media (max-width: 600px) {
+  /* one swipeable row of years on phones instead of five rows */
+  .pub-years {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 0.4rem;
+  }
+
+  .pub-years a {
+    flex-shrink: 0;
+  }
+}
+
+.pub-years a {
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  background: #f2f7f2;
+  color: #1E5631;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.pub-years a:hover {
+  background: #1E5631;
+  color: #fff;
+}
+
+.pub-year {
+  scroll-margin-top: 120px;   /* clear the sticky header when jumping to a year */
+  margin-top: 2rem;
+}
+
+.pub-year h2 {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid #1E5631;
+  margin-bottom: 0.5rem;
+}
+
+.pub-year-count {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #666;
+}
+
+.pub-entries {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pub-entry {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.pub-entry p {
+  margin: 0;
+}
+
+.pub-entry-title {
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.pub-entry-title a {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.pub-entry-title a:hover {
+  color: #1E5631;
+  text-decoration: underline;
+}
+
+.pub-entry-authors {
+  margin-top: 0.25rem !important;
+  font-size: 0.92rem;
+  color: #444;
+  line-height: 1.45;
+}
+
+.pub-entry-details {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem 0.75rem;
+  margin-top: 0.3rem !important;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.pub-doi {
+  padding: 0.1rem 0.55rem;
+  border: 1px solid #1E5631;
+  border-radius: 999px;
+  color: #1E5631;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.pub-doi:hover {
+  background: #1E5631;
+  color: #fff;
+}
+
+.pub-empty {
+  margin-top: 2rem;
+  color: #555;
+}
+
+.pub-error {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #fff3cd;
+  border-radius: 8px;
+}
