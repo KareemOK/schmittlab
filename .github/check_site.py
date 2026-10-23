@@ -108,7 +108,7 @@ for page in sorted(glob.glob("*.html")) + ["layout.js", "styles.css"]:
     refs = re.findall(r'(?:src|href)="([^"]+)"', text) + re.findall(r'"(assets/[^"]+)"', text) \
         + re.findall(r'url\("?([^")]+)"?\)', text)
     for ref in set(refs):
-        if "${" in ref or ref.startswith(("var(", "/")) or not re.search(r"\.(png|jpe?g|svg|webp|gif|ico|css|js|json|html|pdf)$", ref.split("?")[0], re.I):
+        if "${" in ref or ref.startswith(("var(", "/")) or not re.search(r"\.(png|jpe?g|svg|webp|gif|ico|css|js|json|html|pdf|woff2?)$", ref.split("?")[0], re.I):
             continue
         check_file(page, ref)
 
