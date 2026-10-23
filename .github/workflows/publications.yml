@@ -1,0 +1,46 @@
+# Rebuilds publications.json whenever publications.bib changes,
+# so adding a paper is just: paste its BibTeX into publications.bib and commit.
+name: Update publications
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - publications.bib
+      - bib_to_json.py
+  workflow_dispatch: # "Run workflow" button on the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publications
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install BibTeX parser
+        run: pip install bibtexparser==1.4.3
+
+      - name: Rebuild publications.json
+        run: python bib_to_json.py
+
+      - name: Commit publications.json if it changed
+        run: |
+          if git diff --quiet -- publications.json; then
+            echo "publications.json is already up to date"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add publications.json
+          git commit -m "Rebuild publications.json from publications.bib"
+          git push

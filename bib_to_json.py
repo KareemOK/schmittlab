@@ -1,12 +1,23 @@
 import json
+import re
+import sys
 import bibtexparser
 from bibtexparser.bparser import BibTexParser
 from bibtexparser.customization import convert_to_unicode
 
 with open("publications.bib", encoding="utf-8") as f:
-    parser = BibTexParser(common_strings=True)
-    parser.customization = convert_to_unicode
-    bib_db = bibtexparser.load(f, parser=parser)
+    bib_text = f.read()
+
+parser = BibTexParser(common_strings=True)
+parser.customization = convert_to_unicode
+bib_db = bibtexparser.loads(bib_text, parser=parser)
+
+# A typo in the .bib (e.g. a missing brace) can make the parser silently skip
+# entries. Stop rather than publish a shorter list.
+expected = len(re.findall(r"^\s*@(?!comment|string|preamble)\w+\s*\{", bib_text, re.I | re.M))
+if len(bib_db.entries) != expected:
+    sys.exit(f"Read {len(bib_db.entries)} of {expected} entries in publications.bib; "
+             "check the entries around the last one that was read. publications.json was not changed.")
 
 publications = []
 

@@ -31,3 +31,16 @@ A new page needs these three lines in its `<body>` (copy them from any existing 
 The home page shows the newest 3 posts from `news.json`, and `news.html` shows them all.
 Project pages show the newest 3 with a matching tag (e.g. `data-tag="c4c"`), and link to
 `news.html?tag=c4c` for the rest.
+
+## Publications
+
+`publications.bib` is the master list. To add a paper:
+
+1. Copy its BibTeX (from the journal's "Cite" / "Export citation" button, or Google Scholar).
+2. On GitHub, open `publications.bib`, click the pencil icon, paste the entry anywhere, and commit.
+
+A GitHub Action then rebuilds `publications.json` (which the site reads) within a minute or two.
+Don't edit `publications.json` by hand: it is overwritten on every rebuild.
+
+If the Action fails (a red ✗ on the Actions tab), an entry in `publications.bib` has a typo,
+usually a missing `}`; the site keeps showing the previous list until it's fixed.
