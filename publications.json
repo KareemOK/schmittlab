@@ -7,7 +7,11 @@
     "volume": "27",
     "pages": "2694962",
     "doi": "10.1080/14686996.2026.2694962",
-    "link": "https://doi.org/10.1080/14686996.2026.2694962"
+    "link": "https://doi.org/10.1080/14686996.2026.2694962",
+    "topics": [
+      "catalysis",
+      "mofs"
+    ]
   },
   {
     "year": "2024",
@@ -17,7 +21,10 @@
     "volume": "15",
     "pages": "10180",
     "doi": "10.1038/s41467-024-54426-4",
-    "link": "http://dx.doi.org/10.1038/s41467-024-54426-4"
+    "link": "http://dx.doi.org/10.1038/s41467-024-54426-4",
+    "topics": [
+      "supramolecular"
+    ]
   },
   {
     "year": "2022",
@@ -27,7 +34,11 @@
     "volume": "6",
     "pages": "e202100299",
     "doi": "10.1002/cptc.202100299",
-    "link": "https://doi.org/10.1002%2Fcptc.202100299"
+    "link": "https://doi.org/10.1002%2Fcptc.202100299",
+    "topics": [
+      "mofs",
+      "luminescence"
+    ]
   },
   {
     "year": "2022",
@@ -37,7 +48,10 @@
     "volume": "13",
     "pages": "6884",
     "doi": "10.1038/s41467-022-34583-0",
-    "link": "https://doi.org/10.1038/s41467-022-34583-0"
+    "link": "https://doi.org/10.1038/s41467-022-34583-0",
+    "topics": [
+      "nanomaterials"
+    ]
   },
   {
     "year": "2021",
@@ -47,7 +61,10 @@
     "volume": "6",
     "pages": "2838",
     "doi": "10.21105/joss.02838",
-    "link": "http://dx.doi.org/10.21105/joss.02838"
+    "link": "http://dx.doi.org/10.21105/joss.02838",
+    "topics": [
+      "magnetism"
+    ]
   },
   {
     "year": "2021",
@@ -57,7 +74,10 @@
     "volume": "60",
     "pages": "8388--8393",
     "doi": "10.1021/acs.inorgchem.1c00984",
-    "link": "https://doi.org/10.1021%2Facs.inorgchem.1c00984"
+    "link": "https://doi.org/10.1021%2Facs.inorgchem.1c00984",
+    "topics": [
+      "clusters"
+    ]
   },
   {
     "year": "2021",
@@ -67,7 +87,10 @@
     "volume": "26",
     "pages": "2955",
     "doi": "10.3390/molecules26102955",
-    "link": "https://doi.org/10.3390/molecules26102955"
+    "link": "https://doi.org/10.3390/molecules26102955",
+    "topics": [
+      "mofs"
+    ]
   },
   {
     "year": "2021",
@@ -77,7 +100,11 @@
     "volume": "50",
     "pages": "770-784",
     "doi": "10.1039/d0dt03684f",
-    "link": "https://doi.org/10.1039%2Fd0dt03684f"
+    "link": "https://doi.org/10.1039%2Fd0dt03684f",
+    "topics": [
+      "mofs",
+      "luminescence"
+    ]
   },
   {
     "year": "2021",
@@ -87,7 +114,12 @@
     "volume": "437",
     "pages": "213757",
     "doi": "10.1016/j.ccr.2020.213757",
-    "link": "https://doi.org/10.1016/j.ccr.2020.213757"
+    "link": "https://doi.org/10.1016/j.ccr.2020.213757",
+    "topics": [
+      "mofs",
+      "luminescence",
+      "catalysis"
+    ]
   },
   {
     "year": "2021",
@@ -97,7 +129,11 @@
     "volume": "13",
     "pages": "2042",
     "doi": "10.3390/w13152042",
-    "link": "https://doi.org/10.3390/w13152042"
+    "link": "https://doi.org/10.3390/w13152042",
+    "topics": [
+      "catalysis",
+      "clusters"
+    ]
   },
   {
     "year": "2020",
@@ -107,7 +143,10 @@
     "volume": "59",
     "pages": "17244--17250",
     "doi": "10.1021/acs.inorgchem.0c02475",
-    "link": "https://doi.org/10.1021%2Facs.inorgchem.0c02475"
+    "link": "https://doi.org/10.1021%2Facs.inorgchem.0c02475",
+    "topics": [
+      "mofs"
+    ]
   },
   {
     "year": "2020",
@@ -117,7 +156,11 @@
     "volume": "59",
     "pages": "14432--14438",
     "doi": "10.1021/acs.inorgchem.0c02182",
-    "link": "https://doi.org/10.1021%2Facs.inorgchem.0c02182"
+    "link": "https://doi.org/10.1021%2Facs.inorgchem.0c02182",
+    "topics": [
+      "supramolecular",
+      "catalysis"
+    ]
   },
   {
     "year": "2020",
@@ -127,7 +170,11 @@
     "volume": "8",
     "pages": "13648--13659",
     "doi": "10.1021/acssuschemeng.0c03379",
-    "link": "https://doi.org/10.1021%2Facssuschemeng.0c03379"
+    "link": "https://doi.org/10.1021%2Facssuschemeng.0c03379",
+    "topics": [
+      "catalysis",
+      "clusters"
+    ]
   },
   {
     "year": "2020",
@@ -137,7 +184,11 @@
     "volume": "4",
     "pages": "4464--4468",
     "doi": "10.1039/d0se00701c",
-    "link": "https://doi.org/10.1039%2Fd0se00701c"
+    "link": "https://doi.org/10.1039%2Fd0se00701c",
+    "topics": [
+      "catalysis",
+      "clusters"
+    ]
   },
   {
     "year": "2020",
@@ -147,7 +198,11 @@
     "volume": "49",
     "pages": "8086-8095",
     "doi": "10.1039/d0dt01404d",
-    "link": "https://doi.org/10.1039%2Fd0dt01404d"
+    "link": "https://doi.org/10.1039%2Fd0dt01404d",
+    "topics": [
+      "clusters",
+      "magnetism"
+    ]
   },
   {
     "year": "2020",
@@ -157,7 +212,11 @@
     "volume": "18",
     "pages": "3475-3480",
     "doi": "10.1039/d0ob00033g",
-    "link": "https://doi.org/10.1039/d0ob00033g"
+    "link": "https://doi.org/10.1039/d0ob00033g",
+    "topics": [
+      "supramolecular",
+      "luminescence"
+    ]
   },
   {
     "year": "2020",
@@ -167,7 +226,10 @@
     "volume": "32",
     "pages": "508-517",
     "doi": "10.1080/10610278.2020.1825715",
-    "link": "https://doi.org/10.1080/10610278.2020.1825715"
+    "link": "https://doi.org/10.1080/10610278.2020.1825715",
+    "topics": [
+      "luminescence"
+    ]
   },
   {
     "year": "2020",
@@ -177,7 +239,12 @@
     "volume": "56",
     "pages": "13377-13380",
     "doi": "10.1039/d0cc05715k",
-    "link": "https://doi.org/10.1039%2Fd0cc05715k"
+    "link": "https://doi.org/10.1039%2Fd0cc05715k",
+    "topics": [
+      "co2-capture",
+      "mofs",
+      "luminescence"
+    ]
   },
   {
     "year": "2019",
@@ -187,7 +254,11 @@
     "volume": "58",
     "pages": "9766--9772",
     "doi": "10.1021/acs.inorgchem.9b00768",
-    "link": "https://doi.org/10.1021%2Facs.inorgchem.9b00768"
+    "link": "https://doi.org/10.1021%2Facs.inorgchem.9b00768",
+    "topics": [
+      "co2-capture",
+      "mofs"
+    ]
   },
   {
     "year": "2019",
@@ -197,7 +268,12 @@
     "volume": "48",
     "pages": "15487-15492",
     "doi": "10.1039/c9dt02117e",
-    "link": "https://doi.org/10.1039%2Fc9dt02117e"
+    "link": "https://doi.org/10.1039%2Fc9dt02117e",
+    "topics": [
+      "co2-capture",
+      "mofs",
+      "catalysis"
+    ]
   },
   {
     "year": "2019",
@@ -207,7 +283,12 @@
     "volume": "48",
     "pages": "4794-4797",
     "doi": "10.1039/c9dt00199a",
-    "link": "https://doi.org/10.1039%2Fc9dt00199a"
+    "link": "https://doi.org/10.1039%2Fc9dt00199a",
+    "topics": [
+      "mofs",
+      "clusters",
+      "catalysis"
+    ]
   },
   {
     "year": "2019",
@@ -217,7 +298,10 @@
     "volume": "48",
     "pages": "3018-3027",
     "doi": "10.1039/c9dt00075e",
-    "link": "https://doi.org/10.1039%2Fc9dt00075e"
+    "link": "https://doi.org/10.1039%2Fc9dt00075e",
+    "topics": [
+      "clusters"
+    ]
   },
   {
     "year": "2019",
@@ -227,7 +311,11 @@
     "volume": "55",
     "pages": "5013-5016",
     "doi": "10.1039/c9cc00206e",
-    "link": "https://doi.org/10.1039/c9cc00206e"
+    "link": "https://doi.org/10.1039/c9cc00206e",
+    "topics": [
+      "mofs",
+      "luminescence"
+    ]
   },
   {
     "year": "2019",
@@ -237,7 +325,10 @@
     "volume": "10",
     "pages": "1007",
     "doi": "10.1038/s41467-019-08978-5",
-    "link": "https://doi.org/10.1038/s41467-019-08978-5"
+    "link": "https://doi.org/10.1038/s41467-019-08978-5",
+    "topics": [
+      "supramolecular"
+    ]
   },
   {
     "year": "2019",
@@ -247,7 +338,11 @@
     "volume": "13",
     "pages": "171-184",
     "doi": "10.1007/s11705-018-1762-3",
-    "link": "https://doi.org/10.1007/s11705-018-1762-3"
+    "link": "https://doi.org/10.1007/s11705-018-1762-3",
+    "topics": [
+      "luminescence",
+      "supramolecular"
+    ]
   },
   {
     "year": "2019",
@@ -257,7 +352,11 @@
     "volume": "48",
     "pages": "4830-4836",
     "doi": "10.1039/c8dt04807j",
-    "link": "https://doi.org/10.1039%2Fc8dt04807j"
+    "link": "https://doi.org/10.1039%2Fc8dt04807j",
+    "topics": [
+      "clusters",
+      "catalysis"
+    ]
   },
   {
     "year": "2019",
@@ -267,7 +366,10 @@
     "volume": "10",
     "pages": "4993",
     "doi": "10.1038/s41467-019-12994-w",
-    "link": "https://doi.org/10.1038/s41467-019-12994-w"
+    "link": "https://doi.org/10.1038/s41467-019-12994-w",
+    "topics": [
+      "catalysis"
+    ]
   },
   {
     "year": "2019",
@@ -277,7 +379,10 @@
     "volume": "55",
     "pages": "12140--12143",
     "doi": "10.1039/c9cc05585a",
-    "link": "https://doi.org/10.1039%2Fc9cc05585a"
+    "link": "https://doi.org/10.1039%2Fc9cc05585a",
+    "topics": [
+      "luminescence"
+    ]
   },
   {
     "year": "2018",
@@ -287,7 +392,11 @@
     "volume": "2018",
     "pages": "1993–1997",
     "doi": "10.1002/ejic.201800217",
-    "link": "http://dx.doi.org/10.1002/ejic.201800217"
+    "link": "http://dx.doi.org/10.1002/ejic.201800217",
+    "topics": [
+      "co2-capture",
+      "mofs"
+    ]
   },
   {
     "year": "2018",
@@ -297,7 +406,10 @@
     "volume": "57",
     "pages": "3920-3930",
     "doi": "10.1021/acs.inorgchem.8b00080",
-    "link": "https://doi.org/10.1021/acs.inorgchem.8b00080"
+    "link": "https://doi.org/10.1021/acs.inorgchem.8b00080",
+    "topics": [
+      "luminescence"
+    ]
   },
   {
     "year": "2018",
@@ -307,7 +419,12 @@
     "volume": "47",
     "pages": "10857--10860",
     "doi": "10.1039/c8dt01755g",
-    "link": "https://doi.org/10.1039%2Fc8dt01755g"
+    "link": "https://doi.org/10.1039%2Fc8dt01755g",
+    "topics": [
+      "catalysis",
+      "mofs",
+      "clusters"
+    ]
   },
   {
     "year": "2018",
@@ -317,7 +434,10 @@
     "volume": "30",
     "pages": "93-102",
     "doi": "10.1080/10610278.2017.1362108",
-    "link": "https://doi.org/10.1080/10610278.2017.1362108"
+    "link": "https://doi.org/10.1080/10610278.2017.1362108",
+    "topics": [
+      "supramolecular"
+    ]
   },
   {
     "year": "2018",
@@ -327,7 +447,10 @@
     "volume": "7",
     "pages": "22 - 30",
     "doi": "https://doi.org/10.1016/j.coelec.2017.10.001",
-    "link": "http://www.sciencedirect.com/science/article/pii/S2451910317301242"
+    "link": "http://www.sciencedirect.com/science/article/pii/S2451910317301242",
+    "topics": [
+      "catalysis"
+    ]
   },
   {
     "year": "2018",
@@ -337,7 +460,10 @@
     "volume": "47",
     "pages": "5259-5268",
     "doi": "10.1039/c8dt00439k",
-    "link": "https://doi.org/10.1039%2Fc8dt00439k"
+    "link": "https://doi.org/10.1039%2Fc8dt00439k",
+    "topics": [
+      "mofs"
+    ]
   },
   {
     "year": "2018",
@@ -347,7 +473,10 @@
     "volume": "47",
     "pages": "17266-17275",
     "doi": "10.1039/c8dt04583f",
-    "link": "https://doi.org/10.1039%2Fc8dt04583f"
+    "link": "https://doi.org/10.1039%2Fc8dt04583f",
+    "topics": [
+      "supramolecular"
+    ]
   },
   {
     "year": "2018",
@@ -357,7 +486,10 @@
     "volume": "9",
     "pages": "801-808",
     "doi": "10.3762/bjnano.9.73",
-    "link": "https://doi.org/10.3762/bjnano.9.73"
+    "link": "https://doi.org/10.3762/bjnano.9.73",
+    "topics": [
+      "nanomaterials"
+    ]
   },
   {
     "year": "2018",
@@ -367,7 +499,10 @@
     "volume": "371",
     "pages": "67-85",
     "doi": "10.1016/j.ccr.2018.05.014",
-    "link": "https://doi.org/10.1016/j.ccr.2018.05.014"
+    "link": "https://doi.org/10.1016/j.ccr.2018.05.014",
+    "topics": [
+      "supramolecular"
+    ]
   },
   {
     "year": "2018",
@@ -377,7 +512,11 @@
     "volume": "20",
     "pages": "5127-5131",
     "doi": "10.1039/c8ce01211c",
-    "link": "https://doi.org/10.1039%2Fc8ce01211c"
+    "link": "https://doi.org/10.1039%2Fc8ce01211c",
+    "topics": [
+      "mofs",
+      "supramolecular"
+    ]
   },
   {
     "year": "2018",
@@ -387,7 +526,11 @@
     "volume": "47",
     "pages": "10080-10092",
     "doi": "10.1039/c8dt01784k",
-    "link": "https://doi.org/10.1039%2Fc8dt01784k"
+    "link": "https://doi.org/10.1039%2Fc8dt01784k",
+    "topics": [
+      "mofs",
+      "luminescence"
+    ]
   },
   {
     "year": "2018",
@@ -397,7 +540,10 @@
     "volume": "2",
     "pages": "1366-1373",
     "doi": "10.1039/c8qm00182k",
-    "link": "https://doi.org/10.1039%2Fc8qm00182k"
+    "link": "https://doi.org/10.1039%2Fc8qm00182k",
+    "topics": [
+      "luminescence"
+    ]
   },
   {
     "year": "2017",
@@ -407,7 +553,11 @@
     "volume": "53",
     "pages": "5989-5992",
     "doi": "10.1039/c7cc03482b",
-    "link": "https://doi.org/10.1039/c7cc03482b"
+    "link": "https://doi.org/10.1039/c7cc03482b",
+    "topics": [
+      "luminescence",
+      "supramolecular"
+    ]
   },
   {
     "year": "2017",
@@ -417,7 +567,12 @@
     "volume": "8",
     "pages": "1535-1546",
     "doi": "10.1039/c6sc04367d",
-    "link": "https://doi.org/10.1039/c6sc04367d"
+    "link": "https://doi.org/10.1039/c6sc04367d",
+    "topics": [
+      "supramolecular",
+      "luminescence",
+      "mofs"
+    ]
   },
   {
     "year": "2017",
@@ -427,7 +582,10 @@
     "volume": "19",
     "pages": "1427-1438",
     "doi": "10.1039/c7ce00206h",
-    "link": "https://doi.org/10.1039/c7ce00206h"
+    "link": "https://doi.org/10.1039/c7ce00206h",
+    "topics": [
+      "supramolecular"
+    ]
   },
   {
     "year": "2017",
@@ -437,7 +595,10 @@
     "volume": "46",
     "pages": "6456-6463",
     "doi": "10.1039/c7dt00914c",
-    "link": "https://doi.org/10.1039/c7dt00914c"
+    "link": "https://doi.org/10.1039/c7dt00914c",
+    "topics": [
+      "supramolecular"
+    ]
   },
   {
     "year": "2017",
@@ -447,7 +608,10 @@
     "volume": "19",
     "pages": "994-1000",
     "doi": "10.1039/c6ce02493a",
-    "link": "https://doi.org/10.1039/c6ce02493a"
+    "link": "https://doi.org/10.1039/c6ce02493a",
+    "topics": [
+      "mofs"
+    ]
   },
   {
     "year": "2017",
@@ -457,7 +621,10 @@
     "volume": "53",
     "pages": "10660-10663",
     "doi": "10.1039/c7cc05498j",
-    "link": "https://doi.org/10.1039/c7cc05498j"
+    "link": "https://doi.org/10.1039/c7cc05498j",
+    "topics": [
+      "clusters"
+    ]
   },
   {
     "year": "2017",
@@ -467,7 +634,10 @@
     "volume": "17",
     "pages": "1568-1573",
     "doi": "10.1021/acs.cgd.6b01555",
-    "link": "https://doi.org/10.1021/acs.cgd.6b01555"
+    "link": "https://doi.org/10.1021/acs.cgd.6b01555",
+    "topics": [
+      "nanomaterials"
+    ]
   },
   {
     "year": "2017",
@@ -477,7 +647,10 @@
     "volume": "5",
     "pages": "25014-25024",
     "doi": "10.1039/c7ta07292a",
-    "link": "https://doi.org/10.1039%2Fc7ta07292a"
+    "link": "https://doi.org/10.1039%2Fc7ta07292a",
+    "topics": [
+      "luminescence"
+    ]
   },
   {
     "year": "2017",
@@ -487,7 +660,10 @@
     "volume": "8",
     "pages": "15268",
     "doi": "10.1038/ncomms15268",
-    "link": "https://doi.org/10.1038/ncomms15268"
+    "link": "https://doi.org/10.1038/ncomms15268",
+    "topics": [
+      "supramolecular"
+    ]
   },
   {
     "year": "2016",
@@ -497,7 +673,12 @@
     "volume": "45",
     "pages": "17705-17713",
     "doi": "10.1039/c6dt02642g",
-    "link": "https://doi.org/10.1039/c6dt02642g"
+    "link": "https://doi.org/10.1039/c6dt02642g",
+    "topics": [
+      "supramolecular",
+      "magnetism",
+      "clusters"
+    ]
   },
   {
     "year": "2016",
@@ -507,7 +688,10 @@
     "volume": "6",
     "pages": "20704",
     "doi": "10.1038/srep20704",
-    "link": "https://doi.org/10.1038/srep20704"
+    "link": "https://doi.org/10.1038/srep20704",
+    "topics": [
+      "nanomaterials"
+    ]
   },
   {
     "year": "2016",
@@ -517,7 +701,11 @@
     "volume": "55",
     "pages": "11570-11582",
     "doi": "10.1021/acs.inorgchem.6b02137",
-    "link": "https://doi.org/10.1021/acs.inorgchem.6b02137"
+    "link": "https://doi.org/10.1021/acs.inorgchem.6b02137",
+    "topics": [
+      "mofs",
+      "luminescence"
+    ]
   },
   {
     "year": "2016",
@@ -527,7 +715,10 @@
     "volume": "2016",
     "pages": "1939-1943",
     "doi": "10.1002/ejic.201501194",
-    "link": "https://doi.org/10.1002/ejic.201501194"
+    "link": "https://doi.org/10.1002/ejic.201501194",
+    "topics": [
+      "mofs"
+    ]
   },
   {
     "year": "2016",
@@ -537,7 +728,10 @@
     "volume": "45",
     "pages": "1349-1353",
     "doi": "10.1039/c5dt04820f",
-    "link": "https://doi.org/10.1039/c5dt04820f"
+    "link": "https://doi.org/10.1039/c5dt04820f",
+    "topics": [
+      "clusters"
+    ]
   },
   {
     "year": "2016",
@@ -547,7 +741,10 @@
     "volume": "69",
     "pages": "2403-2414",
     "doi": "10.1080/00958972.2016.1197390",
-    "link": "https://doi.org/10.1080/00958972.2016.1197390"
+    "link": "https://doi.org/10.1080/00958972.2016.1197390",
+    "topics": [
+      "luminescence"
+    ]
   },
   {
     "year": "2015",
@@ -557,7 +754,11 @@
     "volume": "16",
     "pages": "024803",
     "doi": "10.1088/1468-6996/16/2/024803",
-    "link": "https://doi.org/10.1088/1468-6996/16/2/024803"
+    "link": "https://doi.org/10.1088/1468-6996/16/2/024803",
+    "topics": [
+      "mofs",
+      "luminescence"
+    ]
   },
   {
     "year": "2015",
@@ -567,7 +768,11 @@
     "volume": "5",
     "pages": "087122",
     "doi": "10.1063/1.4928494",
-    "link": "https://doi.org/10.1063/1.4928494"
+    "link": "https://doi.org/10.1063/1.4928494",
+    "topics": [
+      "nanomaterials",
+      "magnetism"
+    ]
   },
   {
     "year": "2015",
@@ -577,7 +782,10 @@
     "volume": "51",
     "pages": "13313-13316",
     "doi": "10.1039/c5cc04928h",
-    "link": "https://doi.org/10.1039/c5cc04928h"
+    "link": "https://doi.org/10.1039/c5cc04928h",
+    "topics": [
+      "mofs"
+    ]
   },
   {
     "year": "2014",
@@ -587,7 +795,10 @@
     "volume": "16",
     "pages": "7894-7905",
     "doi": "10.1039/c4ce00553h",
-    "link": "https://doi.org/10.1039/c4ce00553h"
+    "link": "https://doi.org/10.1039/c4ce00553h",
+    "topics": [
+      "mofs"
+    ]
   },
   {
     "year": "2014",
@@ -597,7 +808,10 @@
     "volume": "20",
     "pages": "3595-3599",
     "doi": "10.1002/chem.201304856",
-    "link": "https://doi.org/10.1002/chem.201304856"
+    "link": "https://doi.org/10.1002/chem.201304856",
+    "topics": [
+      "mofs"
+    ]
   },
   {
     "year": "2014",
@@ -607,7 +821,11 @@
     "volume": "50",
     "pages": "2265-2267",
     "doi": "10.1039/c3cc48541b",
-    "link": "https://doi.org/10.1039/c3cc48541b"
+    "link": "https://doi.org/10.1039/c3cc48541b",
+    "topics": [
+      "clusters",
+      "supramolecular"
+    ]
   },
   {
     "year": "2014",
@@ -617,7 +835,11 @@
     "volume": "118",
     "pages": "10291-10301",
     "doi": "10.1021/jp501359m",
-    "link": "https://doi.org/10.1021/jp501359m"
+    "link": "https://doi.org/10.1021/jp501359m",
+    "topics": [
+      "luminescence",
+      "mofs"
+    ]
   },
   {
     "year": "2014",
@@ -627,7 +849,10 @@
     "volume": "50",
     "pages": "4207-4210",
     "doi": "10.1039/c3cc49829h",
-    "link": "https://doi.org/10.1039/c3cc49829h"
+    "link": "https://doi.org/10.1039/c3cc49829h",
+    "topics": [
+      "mofs"
+    ]
   },
   {
     "year": "2013",
@@ -637,7 +862,10 @@
     "volume": "49",
     "pages": "7400-7402",
     "doi": "10.1039/c3cc42954g",
-    "link": "https://doi.org/10.1039/c3cc42954g"
+    "link": "https://doi.org/10.1039/c3cc42954g",
+    "topics": [
+      "clusters"
+    ]
   },
   {
     "year": "2013",
@@ -647,7 +875,10 @@
     "volume": "50",
     "pages": "5233-5235",
     "doi": "10.1039/c3cc47552b",
-    "link": "https://doi.org/10.1039/c3cc47552b"
+    "link": "https://doi.org/10.1039/c3cc47552b",
+    "topics": [
+      "clusters"
+    ]
   },
   {
     "year": "2013",
@@ -657,7 +888,10 @@
     "volume": "42",
     "pages": "2779-2785",
     "doi": "10.1039/c2dt32547k",
-    "link": "https://doi.org/10.1039/c2dt32547k"
+    "link": "https://doi.org/10.1039/c2dt32547k",
+    "topics": [
+      "mofs"
+    ]
   },
   {
     "year": "2013",
@@ -667,7 +901,11 @@
     "volume": "49",
     "pages": "66-68",
     "doi": "10.1039/c2cc35486a",
-    "link": "https://doi.org/10.1039/c2cc35486a"
+    "link": "https://doi.org/10.1039/c2cc35486a",
+    "topics": [
+      "supramolecular",
+      "clusters"
+    ]
   },
   {
     "year": "2013",
@@ -677,7 +915,11 @@
     "volume": "",
     "pages": "1654-1658",
     "doi": "10.1002/ejic.201201177",
-    "link": "https://doi.org/10.1002/ejic.201201177"
+    "link": "https://doi.org/10.1002/ejic.201201177",
+    "topics": [
+      "clusters",
+      "magnetism"
+    ]
   },
   {
     "year": "2012",
@@ -687,7 +929,8 @@
     "volume": "68",
     "pages": "m1437-m1438",
     "doi": "10.1107/s1600536812042882",
-    "link": "https://doi.org/10.1107/s1600536812042882"
+    "link": "https://doi.org/10.1107/s1600536812042882",
+    "topics": []
   },
   {
     "year": "2012",
@@ -697,7 +940,10 @@
     "volume": "48",
     "pages": "3638-3640",
     "doi": "10.1039/c2cc17357c",
-    "link": "https://doi.org/10.1039/c2cc17357c"
+    "link": "https://doi.org/10.1039/c2cc17357c",
+    "topics": [
+      "mofs"
+    ]
   },
   {
     "year": "2012",
@@ -707,7 +953,11 @@
     "volume": "51",
     "pages": "19-21",
     "doi": "10.1021/ic202104z",
-    "link": "https://doi.org/10.1021/ic202104z"
+    "link": "https://doi.org/10.1021/ic202104z",
+    "topics": [
+      "clusters",
+      "supramolecular"
+    ]
   },
   {
     "year": "2012",
@@ -717,7 +967,12 @@
     "volume": "51",
     "pages": "3007-3011",
     "doi": "10.1002/anie.201107358",
-    "link": "https://doi.org/10.1002/anie.201107358"
+    "link": "https://doi.org/10.1002/anie.201107358",
+    "topics": [
+      "clusters",
+      "magnetism",
+      "supramolecular"
+    ]
   },
   {
     "year": "2012",
@@ -727,7 +982,10 @@
     "volume": "77",
     "pages": "3115-3126",
     "doi": "10.1021/jo202332h",
-    "link": "https://doi.org/10.1021/jo202332h"
+    "link": "https://doi.org/10.1021/jo202332h",
+    "topics": [
+      "luminescence"
+    ]
   },
   {
     "year": "2012",
@@ -737,7 +995,11 @@
     "volume": "41",
     "pages": "2918-2926",
     "doi": "10.1039/c2dt11153e",
-    "link": "https://doi.org/10.1039/c2dt11153e"
+    "link": "https://doi.org/10.1039/c2dt11153e",
+    "topics": [
+      "clusters",
+      "supramolecular"
+    ]
   },
   {
     "year": "2012",
@@ -747,7 +1009,13 @@
     "volume": "18",
     "pages": "13984-13988",
     "doi": "10.1002/chem.201202297",
-    "link": "https://doi.org/10.1002/chem.201202297"
+    "link": "https://doi.org/10.1002/chem.201202297",
+    "topics": [
+      "mofs",
+      "clusters",
+      "magnetism",
+      "supramolecular"
+    ]
   },
   {
     "year": "2012",
@@ -757,7 +1025,8 @@
     "volume": "68",
     "pages": "m1212-m1213",
     "doi": "10.1107/s1600536812035362",
-    "link": "https://doi.org/10.1107/s1600536812035362"
+    "link": "https://doi.org/10.1107/s1600536812035362",
+    "topics": []
   },
   {
     "year": "2011",
@@ -767,7 +1036,11 @@
     "volume": "133",
     "pages": "11240-11248",
     "doi": "10.1021/ja2024004",
-    "link": "https://doi.org/10.1021/ja2024004"
+    "link": "https://doi.org/10.1021/ja2024004",
+    "topics": [
+      "clusters",
+      "supramolecular"
+    ]
   },
   {
     "year": "2011",
@@ -777,7 +1050,10 @@
     "volume": "40",
     "pages": "12368-12373",
     "doi": "10.1039/c1dt11381j",
-    "link": "https://doi.org/10.1039/c1dt11381j"
+    "link": "https://doi.org/10.1039/c1dt11381j",
+    "topics": [
+      "magnetism"
+    ]
   },
   {
     "year": "2011",
@@ -787,7 +1063,10 @@
     "volume": "50",
     "pages": "604-613",
     "doi": "10.1021/ic101672t",
-    "link": "https://doi.org/10.1021/ic101672t"
+    "link": "https://doi.org/10.1021/ic101672t",
+    "topics": [
+      "clusters"
+    ]
   },
   {
     "year": "2011",
@@ -797,7 +1076,11 @@
     "volume": "21",
     "pages": "655-661",
     "doi": "10.1007/s10904-011-9536-0",
-    "link": "https://doi.org/10.1007/s10904-011-9536-0"
+    "link": "https://doi.org/10.1007/s10904-011-9536-0",
+    "topics": [
+      "mofs",
+      "supramolecular"
+    ]
   },
   {
     "year": "2011",
@@ -807,7 +1090,8 @@
     "volume": "67",
     "pages": "m1073-m1074",
     "doi": "10.1107/s1600536811025414",
-    "link": "https://doi.org/10.1107/s1600536811025414"
+    "link": "https://doi.org/10.1107/s1600536811025414",
+    "topics": []
   },
   {
     "year": "2011",
@@ -817,7 +1101,8 @@
     "volume": "67",
     "pages": "m1676",
     "doi": "10.1107/s1600536811043352",
-    "link": "https://doi.org/10.1107/s1600536811043352"
+    "link": "https://doi.org/10.1107/s1600536811043352",
+    "topics": []
   },
   {
     "year": "2010",
@@ -827,7 +1112,10 @@
     "volume": "39",
     "pages": "10279-10285",
     "doi": "10.1039/c0dt00655f",
-    "link": "https://doi.org/10.1039/c0dt00655f"
+    "link": "https://doi.org/10.1039/c0dt00655f",
+    "topics": [
+      "clusters"
+    ]
   },
   {
     "year": "2010",
@@ -837,7 +1125,10 @@
     "volume": "46",
     "pages": "874-876",
     "doi": "10.1039/b921520d",
-    "link": "https://doi.org/10.1039/b921520d"
+    "link": "https://doi.org/10.1039/b921520d",
+    "topics": [
+      "luminescence"
+    ]
   },
   {
     "year": "2010",
@@ -847,7 +1138,10 @@
     "volume": "59",
     "pages": "173-179",
     "doi": "10.1093/jmicro/dfp055",
-    "link": "https://doi.org/10.1093/jmicro/dfp055"
+    "link": "https://doi.org/10.1093/jmicro/dfp055",
+    "topics": [
+      "nanomaterials"
+    ]
   },
   {
     "year": "2010",
@@ -857,7 +1151,10 @@
     "volume": "22",
     "pages": "483-490",
     "doi": "10.1080/10610278.2010.483732",
-    "link": "https://doi.org/10.1080/10610278.2010.483732"
+    "link": "https://doi.org/10.1080/10610278.2010.483732",
+    "topics": [
+      "supramolecular"
+    ]
   },
   {
     "year": "2009",
@@ -867,7 +1164,10 @@
     "volume": "",
     "pages": "221-223",
     "doi": "10.1039/b816196h",
-    "link": "https://doi.org/10.1039/b816196h"
+    "link": "https://doi.org/10.1039/b816196h",
+    "topics": [
+      "magnetism"
+    ]
   },
   {
     "year": "2009",
@@ -877,7 +1177,11 @@
     "volume": "11",
     "pages": "1666-1673",
     "doi": "10.1039/b902010a",
-    "link": "https://doi.org/10.1039/b902010a"
+    "link": "https://doi.org/10.1039/b902010a",
+    "topics": [
+      "mofs",
+      "magnetism"
+    ]
   },
   {
     "year": "2008",
@@ -887,7 +1191,11 @@
     "volume": "47",
     "pages": "6904-6908",
     "doi": "10.1002/ange.200801770",
-    "link": "https://doi.org/10.1002/ange.200801770"
+    "link": "https://doi.org/10.1002/ange.200801770",
+    "topics": [
+      "clusters",
+      "supramolecular"
+    ]
   },
   {
     "year": "2008",
@@ -897,7 +1205,10 @@
     "volume": "",
     "pages": "1904-1906",
     "doi": "10.1039/b719497h",
-    "link": "https://doi.org/10.1039/b719497h"
+    "link": "https://doi.org/10.1039/b719497h",
+    "topics": [
+      "nanomaterials"
+    ]
   },
   {
     "year": "2007",
@@ -907,7 +1218,10 @@
     "volume": "31",
     "pages": "1882-1886",
     "doi": "10.1039/b711185a",
-    "link": "https://doi.org/10.1039/b711185a"
+    "link": "https://doi.org/10.1039/b711185a",
+    "topics": [
+      "supramolecular"
+    ]
   },
   {
     "year": "2007",
@@ -917,7 +1231,10 @@
     "volume": "",
     "pages": "5248-5252",
     "doi": "10.1039/b710828a",
-    "link": "https://doi.org/10.1039/b710828a"
+    "link": "https://doi.org/10.1039/b710828a",
+    "topics": [
+      "supramolecular"
+    ]
   },
   {
     "year": "2006",
@@ -927,7 +1244,10 @@
     "volume": "18",
     "pages": "1795-1802",
     "doi": "10.1021/cm052270s",
-    "link": "https://doi.org/10.1021/cm052270s"
+    "link": "https://doi.org/10.1021/cm052270s",
+    "topics": [
+      "nanomaterials"
+    ]
   },
   {
     "year": "2006",
@@ -937,7 +1257,10 @@
     "volume": "",
     "pages": "2320-2322",
     "doi": "10.1039/b517668a",
-    "link": "https://doi.org/10.1039/b517668a"
+    "link": "https://doi.org/10.1039/b517668a",
+    "topics": [
+      "supramolecular"
+    ]
   },
   {
     "year": "2005",
@@ -947,7 +1270,11 @@
     "volume": "",
     "pages": "2098-2100",
     "doi": "10.1039/b416766j",
-    "link": "https://doi.org/10.1039/b416766j"
+    "link": "https://doi.org/10.1039/b416766j",
+    "topics": [
+      "clusters",
+      "magnetism"
+    ]
   },
   {
     "year": "2005",
@@ -957,7 +1284,11 @@
     "volume": "",
     "pages": "5982-5984",
     "doi": "10.1039/b512320h",
-    "link": "https://doi.org/10.1039/b512320h"
+    "link": "https://doi.org/10.1039/b512320h",
+    "topics": [
+      "supramolecular",
+      "nanomaterials"
+    ]
   },
   {
     "year": "2005",
@@ -967,7 +1298,8 @@
     "volume": "",
     "pages": "2893-2902",
     "doi": "10.1002/ejoc.200500257",
-    "link": "https://doi.org/10.1002/ejoc.200500257"
+    "link": "https://doi.org/10.1002/ejoc.200500257",
+    "topics": []
   },
   {
     "year": "2005",
@@ -977,7 +1309,10 @@
     "volume": "44",
     "pages": "4187-4192",
     "doi": "10.1002/ange.200500516",
-    "link": "https://doi.org/10.1002/ange.200500516"
+    "link": "https://doi.org/10.1002/ange.200500516",
+    "topics": [
+      "supramolecular"
+    ]
   },
   {
     "year": "2005",
@@ -987,7 +1322,11 @@
     "volume": "44",
     "pages": "7048-7053",
     "doi": "10.1002/ange.200501748",
-    "link": "https://doi.org/10.1002/ange.200501748"
+    "link": "https://doi.org/10.1002/ange.200501748",
+    "topics": [
+      "supramolecular",
+      "nanomaterials"
+    ]
   },
   {
     "year": "2003",
@@ -997,7 +1336,10 @@
     "volume": "125",
     "pages": "11142-11143",
     "doi": "10.1021/ja029409+",
-    "link": "https://doi.org/10.1021/ja029409+"
+    "link": "https://doi.org/10.1021/ja029409+",
+    "topics": [
+      "supramolecular"
+    ]
   },
   {
     "year": "2002",
@@ -1007,7 +1349,10 @@
     "volume": "91",
     "pages": "173-189",
     "doi": "10.1016/s0162-0134(02)00404-x",
-    "link": "https://doi.org/10.1016/s0162-0134(02)00404-x"
+    "link": "https://doi.org/10.1016/s0162-0134(02)00404-x",
+    "topics": [
+      "clusters"
+    ]
   },
   {
     "year": "2002",
@@ -1017,7 +1362,10 @@
     "volume": "628",
     "pages": "2443-2457",
     "doi": "10.1002/1521-3749(200211)628:11<2443::AID-ZAAC2443>3.0.CO;2-1",
-    "link": "https://doi.org/10.1002/1521-3749(200211)628:11<2443::AID-ZAAC2443>3.0.CO;2-1"
+    "link": "https://doi.org/10.1002/1521-3749(200211)628:11<2443::AID-ZAAC2443>3.0.CO;2-1",
+    "topics": [
+      "clusters"
+    ]
   },
   {
     "year": "2002",
@@ -1027,7 +1375,10 @@
     "volume": "228",
     "pages": "115-126",
     "doi": "10.1016/s0010-8545(02)00110-8",
-    "link": "https://doi.org/10.1016/s0010-8545(02)00110-8"
+    "link": "https://doi.org/10.1016/s0010-8545(02)00110-8",
+    "topics": [
+      "clusters"
+    ]
   },
   {
     "year": "2001",
@@ -1037,7 +1388,11 @@
     "volume": "20",
     "pages": "1687-1697",
     "doi": "10.1016/s0277-5387(01)00673-8",
-    "link": "https://doi.org/10.1016/s0277-5387(01)00673-8"
+    "link": "https://doi.org/10.1016/s0277-5387(01)00673-8",
+    "topics": [
+      "clusters",
+      "magnetism"
+    ]
   },
   {
     "year": "2001",
@@ -1047,7 +1402,11 @@
     "volume": "40",
     "pages": "3578-3581",
     "doi": "10.1002/1521-3773(20011001)40:19<3577::AID-ANIE3577>3.0.CO;2-A",
-    "link": "https://doi.org/10.1002/1521-3773(20011001)40:19<3577::AID-ANIE3577>3.0.CO;2-A"
+    "link": "https://doi.org/10.1002/1521-3773(20011001)40:19<3577::AID-ANIE3577>3.0.CO;2-A",
+    "topics": [
+      "clusters",
+      "supramolecular"
+    ]
   },
   {
     "year": "1999",
@@ -1057,6 +1416,9 @@
     "volume": "190-192",
     "pages": "1067-1083",
     "doi": "10.1016/s0010-8545(99)00158-7",
-    "link": "https://doi.org/10.1016/s0010-8545(99)00158-7"
+    "link": "https://doi.org/10.1016/s0010-8545(99)00158-7",
+    "topics": [
+      "clusters"
+    ]
   }
 ]
