@@ -2,8 +2,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("news-list");
   if (!container) return;
 
-  const tag = container.dataset.tag || null;
-  const limit = 3;
+  // data-tag="c4c" filters by tag; the archive page also accepts ?tag=c4c in the URL.
+  // data-limit="all" (archive page) shows every post; otherwise the newest 3.
+  const showAll = container.dataset.limit === "all";
+  const tag = container.dataset.tag
+    || (showAll ? new URLSearchParams(location.search).get("tag") : null)
+    || null;
+  const limit = showAll ? Infinity : 3;
+
+  const tagNote = document.getElementById("news-tag-note");
+  if (tagNote && tag) {
+    // textContent, not innerHTML: the tag can come from the URL
+    tagNote.textContent = `Showing posts tagged “${tag}” · `;
+    const allLink = document.createElement("a");
+    allLink.href = "news.html";
+    allLink.textContent = "Show all news";
+    tagNote.appendChild(allLink);
+    tagNote.hidden = false;
+  }
 
   fetch("news.json?v=1")
     .then(response => {
@@ -42,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const imageStyle = item.focus ? ` style="object-position: ${item.focus}"` : "";
         const imageHtml = item.image
           ? `<div class="${wrapClass}" style="--news-image: url('${item.image}')">
-               <img src="${item.image}" class="news-image"${imageStyle} alt="${altText(item)}">
+               <img src="${item.image}" class="news-image"${imageStyle} alt="${altText(item)}"${index === 0 ? "" : ' loading="lazy"'}>
              </div>`
           : "";
 

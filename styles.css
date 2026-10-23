@@ -1283,3 +1283,36 @@ nav a.active {
 .pub-citation {
   overflow-wrap: anywhere;
 }
+
+/* Text for screen readers and search engines that isn't shown on screen */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Link to the full news archive, and the archive's tag filter note */
+.news-more {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #1E5631;
+  text-decoration: none;
+}
+
+.news-more:hover {
+  text-decoration: underline;
+}
+
+.news-tag-note {
+  color: #444;
+  margin: 0.5rem 0 0;
+}
+
+.news-tag-note a {
+  color: #1E5631;
+  font-weight: 600;
+}
