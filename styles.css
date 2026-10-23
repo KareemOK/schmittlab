@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   color: #222;
   background: #fff;
   line-height: 1.6;
@@ -8,7 +8,7 @@ body {
 
 h1,
 h2 {
-  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   font-weight: 700;
   margin-top: 0;
 }
