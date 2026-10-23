@@ -48,10 +48,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         div.innerHTML = `
           ${imageHtml}
-          <div class="news-date">${new Date(item.date).toLocaleDateString()}</div>
-          <div class="news-title">${item.title}</div>
-          <div class="news-text">${item.text}</div>
-          ${item.link ? `<a href="${item.link}" class="news-link">Read more →</a>` : ""}
+          <div class="news-body">
+            <div class="news-date">${new Date(item.date).toLocaleDateString()}</div>
+            <div class="news-title">${item.title}</div>
+            <div class="news-text">${item.text}</div>
+            ${item.link ? `<a href="${item.link}" class="news-link">Read more →</a>` : ""}
+          </div>
         `;
 
         container.appendChild(div);
