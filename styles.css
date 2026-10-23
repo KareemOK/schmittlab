@@ -262,14 +262,38 @@ nav a.active {
   line-height: 1.5;
 }
 
-.news-item img.news-image {
-  display: block;
-  width: 100%;
+/* Image box: the whole image is shown, and a blurred copy of it fills
+   any leftover space, so any image shape works in any box size */
+.news-image-wrap {
+  position: relative;
+  overflow: hidden;
   height: 180px;
-  object-fit: contain;
+  flex-shrink: 0;
   background: #ececec;
   border-radius: 8px;
   margin-bottom: 0.8rem;
+}
+
+.news-image-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -20px;              /* hide the blur's soft edges */
+  background: var(--news-image) center / cover no-repeat;
+  filter: blur(18px) brightness(0.9);
+}
+
+.news-item img.news-image {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* "fit": "cover" in news.json crops the image to fill the box instead;
+   "focus" picks which part stays visible */
+.news-image-cover img.news-image {
+  object-fit: cover;
 }
 
 .news-title {
@@ -318,14 +342,14 @@ nav a.active {
     grid-column: 2;
   }
 
-  .news-item-featured img.news-image {
+  .news-item-featured .news-image-wrap {
     height: 300px;
-    flex: 1 1 auto;       
+    flex: 1 1 auto;
     min-height: 300px;
   }
 
-  .news-item-stacked img.news-image {
-    height: 140px;
+  .news-item-stacked .news-image-wrap {
+    height: 160px;
   }
 }
 

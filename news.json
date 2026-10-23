@@ -3,7 +3,7 @@
     "date": "2026-01-23",
     "title": "Congrats Gearóid!",
     "text": "Massive congratulations to soon-to-be Dr. Gearóid Manning, who completed his PhD viva on Friday!",
-    "image": "assets/gearoid-v.jpg",
+    "image": "assets/news/gearoid-v.jpg",
     "tags": ["general"]
   },
   {
@@ -20,13 +20,6 @@
     "image": "assets/epa.svg",
     "link": "c4c.html",
     "tags": ["c4c"]
-  },
-  {
-    "date": "2026-07-23",
-    "title": "Senan's poster presentation",
-    "text": "Today, Senan presented his poster on advanced atmospheric carbon capture at the Energy Science Seminar!",
-    "image": "assets/news/senan-poster.jpg",
-    "tags": ["general"]
   },
   {
     "date": "2026-07-23",
