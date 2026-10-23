@@ -1,0 +1,71 @@
+# Once a month, look for Prof. Schmitt's papers (ORCID + Crossref) that aren't in publications.bib
+# yet. If there are any, open a pull request adding them, for someone to check, add topics to,
+# and merge. Can also be run by hand: Actions tab -> "Check for new papers" -> "Run workflow".
+name: Check for new papers
+
+on:
+  schedule:
+    - cron: "0 7 1 * *"   # 07:00 UTC on the 1st of each month
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/find_new_papers.py
+      - .github/workflows/new-papers.yml
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: new-papers
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Look for new papers
+        run: python .github/find_new_papers.py
+
+      - name: Open a pull request with any new papers
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ ! -f new-papers.md ]; then
+            echo "No new papers this time."
+            exit 0
+          fi
+          branch="new-papers-$(date -u +%Y-%m-%d)"
+          if git ls-remote --exit-code --heads origin "$branch" >/dev/null; then
+            echo "A suggestion branch for today already exists ($branch); not making another."
+            exit 0
+          fi
+          # don't re-suggest papers that are already waiting in an open suggestion (pull request or issue)
+          if gh pr list --state open --search "New papers to add in:title" --json number --jq '.[].number' | grep -q . \
+             || gh issue list --state open --search "New papers to add in:title" --json number --jq '.[].number' | grep -q .; then
+            echo "There's already an open 'New papers to add' suggestion; deal with that one first."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add publications.bib
+          git commit -m "Add new papers found on ORCID/Crossref"
+          git push origin "$branch"
+          if ! gh pr create --base main --head "$branch" --title "New papers to add to the website" --body-file new-papers.md; then
+            # Repos can block Actions from opening pull requests; fall back to an issue with a one-click link
+            {
+              cat new-papers.md
+              echo
+              echo "To review and publish: [open a pull request for these papers](https://github.com/${GITHUB_REPOSITORY}/compare/main...${branch}?expand=1)."
+            } > issue.md
+            gh issue create --title "New papers to add to the website" --body-file issue.md
+          fi

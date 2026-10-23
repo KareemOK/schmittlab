@@ -87,3 +87,14 @@ On every commit, GitHub checks `news.json`, `members.json`, the publication topi
 image/file link on the site. A red ✗ next to a commit means something would look broken;
 click it, then "Site checks", to see exactly what (e.g. a missing comma, or a photo filename
 with the wrong capital letters). Fix it and commit again.
+
+## New papers (automatic suggestions)
+
+On the 1st of each month, the "Check for new papers" Action looks at Prof. Schmitt's ORCID record
+and Crossref for papers that aren't in `publications.bib` yet. If it finds any, it opens a pull
+request called **"New papers to add to the website"** with their BibTeX already added.
+
+To publish them: open the pull request → *Files changed* → edit `publications.bib`, fill in each new
+paper's `topics = {...}`, then *Merge*. To reject one, delete its entry and add its DOI to
+`.github/ignored-dois.txt` so it isn't suggested again. You can also run the check any time:
+Actions tab → "Check for new papers" → *Run workflow*.

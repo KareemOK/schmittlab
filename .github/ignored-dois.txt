@@ -1,0 +1,6 @@
+# DOIs the monthly "Check for new papers" Action should never suggest (one per line).
+# Add a DOI here when a suggested paper isn't one you want on the website,
+# e.g. a preprint of a paper that's already listed, or someone else's paper.
+# Text after # is a comment.
+
+10.26434/chemrxiv.7963592.v2   # ChemRxiv preprint of the 2019 Nature Communications scaling-relations paper
