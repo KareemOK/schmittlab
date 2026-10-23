@@ -29,7 +29,6 @@
   ];
 
   const CONTACT_EMAIL = "schmittw@tcd.ie";
-  const LINKEDIN_URL = "https://www.linkedin.com/";
 
   // "" or "/" means the homepage
   const currentPage = location.pathname.split("/").pop() || "index.html";
@@ -68,13 +67,6 @@
             <img src="assets/email.svg" alt="" loading="lazy">
           </span>
           <span>Email us</span>
-        </a>
-
-        <a href="${LINKEDIN_URL}" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
-          <span class="icon">
-            <img src="assets/linkedin.svg" alt="" loading="lazy">
-          </span>
-          <span>Find us on LinkedIn</span>
         </a>
       </div>
 
