@@ -752,6 +752,19 @@ nav a.active {
   margin: 0 0 1rem;
 }
 
+/* Section spacing on project pages: headings carry the gap (no <br> spacers) */
+.c4c-content h2,
+.water-splitting-content h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 0.9rem;
+}
+
+/* cards on project pages stay left-aligned (the page text around them is justified) */
+.c4c-content .news-item,
+.c4c-content .news-item p {
+  text-align: left;
+}
+
 .water-splitting-content p {
   text-align: justify;
   text-justify: inter-word;
