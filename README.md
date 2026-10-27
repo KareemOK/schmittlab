@@ -105,7 +105,7 @@ Go to **Issues → New issue → "News post"**, fill in the title, date, text, o
 in a photo, then submit. Within a minute or two a pull request appears with the post added to
 `news.json` and the photo resized into `assets/news/`. Check it and **Merge** to publish (the issue
 closes itself). To change something before merging, edit the issue: the pull request updates.
-Only group members' forms are processed. You can still edit `news.json` by hand if you prefer.
+Anyone with a free GitHub account can submit the form (direct link: https://github.com/KareemOK/schmittlab/issues/new?template=news-post.yml), so group members don't need access to the repo. Nothing goes live until someone with access merges the pull request; close the issue to reject a post. You can still edit `news.json` by hand if you prefer.
 
 ## Broken links (monthly)
 

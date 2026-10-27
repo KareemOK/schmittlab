@@ -30,10 +30,13 @@
 
   const CONTACT_EMAIL = "schmittw@tcd.ie";
 
-  // "" or "/" means the homepage
-  const currentPage = location.pathname.split("/").pop() || "index.html";
+  // "" or "/" means the homepage; GitHub also serves "/members" for "/members.html"
+  let currentPage = location.pathname.split("/").pop() || "index.html";
+  if (!currentPage.includes(".")) currentPage += ".html";
 
+  // "Skip to content" is the first thing keyboard users reach; it's hidden until focused
   const headerHTML = `
+  <a class="skip-link" href="#main">Skip to content</a>
   <header>
     <div class="header-top">
       <a href="index.html" class="logo-container">

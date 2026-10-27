@@ -1,5 +1,6 @@
-# When someone in the group submits the "News post" issue form, prepare a pull request that adds
-# the post to news.json with the photo resized. Editing the issue updates the pull request.
+# When anyone submits the "News post" issue form, prepare a pull request that adds the post to
+# news.json with the photo resized. Editing the issue updates the pull request. Nothing goes live
+# until someone with access to the repo reviews and merges it.
 name: News post from form
 
 on:
@@ -21,18 +22,9 @@ jobs:
     if: contains(github.event.issue.body, '### Post title') && github.event.issue.state == 'open'
     runs-on: ubuntu-latest
     steps:
-      - name: Only group members can post news
-        if: ${{ !contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.issue.author_association) }}
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          gh issue comment ${{ github.event.issue.number }} --repo "$GITHUB_REPOSITORY" \
-            --body "Thanks! News posts are added by the Schmitt Group; someone from the group will take a look."
-          exit 1
-
       - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v7
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 

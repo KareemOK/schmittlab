@@ -1543,3 +1543,80 @@ nav a.active {
   background: #fff3cd;
   border-radius: 8px;
 }
+
+/* ---------- Skip link, no-JavaScript note ---------- */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 1000;
+  padding: 0.6rem 1rem;
+  background: #1E5631;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 0 0 8px 8px;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+main:focus {
+  outline: none;
+}
+
+.noscript-note {
+  max-width: 900px;
+  margin: 1rem auto;
+  padding: 1rem 1.25rem;
+  background: #fff3cd;
+  border-radius: 8px;
+}
+
+/* ---------- Printing: content only, clean publication list ---------- */
+@media print {
+  header,
+  .site-footer,
+  .skip-link,
+  .nav-toggle,
+  .hero-buttons,
+  .pub-toolbar,
+  .pub-topics,
+  .pub-years,
+  .pub-doi,
+  .news-more {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 11pt;
+  }
+
+  .section {
+    padding: 0 !important;
+    max-width: none;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  .pub-year {
+    margin-top: 1rem;
+  }
+
+  .pub-entry,
+  .news-item,
+  .member-card {
+    break-inside: avoid;
+    box-shadow: none;
+  }
+
+  .pub-entry-details .pub-citation::after {
+    content: "";
+  }
+}
