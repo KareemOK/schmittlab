@@ -1,0 +1,66 @@
+name: News post
+description: Add a post to the website's news. A pull request is prepared for review automatically.
+title: "News: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fill this in and press **Submit new issue**. Within a minute or two a pull request appears with
+        the post added to `news.json` and the photo resized; once it's merged the post goes live.
+
+  - type: input
+    id: title
+    attributes:
+      label: Post title
+      description: Short headline. For journal names you can use <i>italics</i>.
+      placeholder: "New paper published in <i>Chemical Science</i>!"
+    validations:
+      required: true
+
+  - type: input
+    id: date
+    attributes:
+      label: Date
+      description: Year-month-day.
+      placeholder: "2026-10-23"
+    validations:
+      required: true
+
+  - type: textarea
+    id: text
+    attributes:
+      label: Text
+      description: One or two sentences.
+      placeholder: "This week, ... presented ... at ..."
+    validations:
+      required: true
+
+  - type: input
+    id: link
+    attributes:
+      label: Link (optional)
+      description: Adds a "Read more →" link, e.g. to the paper or event.
+      placeholder: "https://doi.org/..."
+
+  - type: textarea
+    id: photo
+    attributes:
+      label: Photo
+      description: |
+        Drag one JPG or PNG photo into this box (iPhone HEIC photos won't work; export as JPG first).
+        Any shape is fine: the site shows the whole photo. 4:3 landscape looks best.
+    validations:
+      required: true
+
+  - type: input
+    id: alt
+    attributes:
+      label: Photo description (optional)
+      description: What the photo shows, for screen readers. Leave empty to use the title.
+
+  - type: checkboxes
+    id: pages
+    attributes:
+      label: Also show on
+      options:
+        - label: C4C-Capture project page

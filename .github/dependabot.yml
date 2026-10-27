@@ -1,0 +1,9 @@
+# Keeps the building blocks used by the GitHub Actions (actions/checkout, actions/setup-python)
+# up to date: Dependabot opens a pull request when there's a new version. Merge it if the
+# checks on it pass.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly

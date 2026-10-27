@@ -96,6 +96,10 @@ if members is not None:
 known_topics = set(re.findall(r'^\s*"([a-z0-9-]+)":', open("publication-format.js", encoding="utf-8").read().split("const TOPICS")[1].split("};")[0], re.M))
 pubs = load_json("publications.json")
 for pub in pubs or []:
+    doi = pub.get("doi", "")
+    if doi and not re.match(r"^10\.\d{4,9}/\S+$", doi):
+        problem(f'publications.bib "{pub.get("title", "")[:50]}"',
+                f'doi "{doi}" should be just the DOI, like 10.1039/d3sc04002j (no https://doi.org/ in front)')
     for t in pub.get("topics", []):
         if t not in known_topics:
             problem(f'publications.bib "{pub.get("title", "")[:50]}"',

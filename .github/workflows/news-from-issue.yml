@@ -1,0 +1,77 @@
+# When someone in the group submits the "News post" issue form, prepare a pull request that adds
+# the post to news.json with the photo resized. Editing the issue updates the pull request.
+name: News post from form
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: news-${{ github.event.issue.number }}
+  cancel-in-progress: true
+
+jobs:
+  news:
+    # only issues made with the News post form
+    if: contains(github.event.issue.body, '### Post title') && github.event.issue.state == 'open'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Only group members can post news
+        if: ${{ !contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.issue.author_association) }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue comment ${{ github.event.issue.number }} --repo "$GITHUB_REPOSITORY" \
+            --body "Thanks! News posts are added by the Schmitt Group; someone from the group will take a look."
+          exit 1
+
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install image tools
+        run: pip install pillow
+
+      - name: Prepare the news post
+        id: prepare
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python .github/news_from_issue.py
+
+      - name: Explain what needs fixing
+        if: failure() && steps.prepare.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue comment ${{ github.event.issue.number }} --repo "$GITHUB_REPOSITORY" --body-file problem.md
+
+      - name: Open or update the pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUM: ${{ github.event.issue.number }}
+        run: |
+          branch="news/issue-$NUM"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add news.json assets/news
+          git commit -m "Add news post from #$NUM"
+          git push --force origin "$branch"
+          if gh pr view "$branch" --json number >/dev/null 2>&1; then
+            gh pr edit "$branch" --body-file pr-body.md
+            gh issue comment "$NUM" --body "Updated the pull request with your changes."
+          elif gh pr create --base main --head "$branch" --title "News: $(jq -r .issue.title "$GITHUB_EVENT_PATH" | sed 's/^News: *//')" --body-file pr-body.md; then
+            gh issue comment "$NUM" --body "Pull request ready for review: $(gh pr view "$branch" --json url --jq .url)"
+          else
+            # Repos can block Actions from opening pull requests: offer a one-click link instead
+            body=$(python3 -c "import urllib.parse,sys; print(urllib.parse.quote(open('pr-body.md',encoding='utf-8').read()))")
+            gh issue comment "$NUM" --body "The post is ready on branch \`$branch\`. [Click here to open the pull request](https://github.com/$GITHUB_REPOSITORY/compare/main...$branch?expand=1&body=$body), check it, then **Merge** to publish."
+          fi

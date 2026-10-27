@@ -1,0 +1,43 @@
+# Once a month, check every external link on the site (DOIs, ORCID, Scholar, funders, news links).
+# Broken ones are listed in a single "Broken links on the website" issue, which closes itself once
+# everything works again. Can also be run by hand: Actions tab -> "Check links" -> "Run workflow".
+name: Check links
+
+on:
+  schedule:
+    - cron: "0 7 2 * *"   # 07:00 UTC on the 2nd of each month
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check links
+        run: python .github/check_links.py
+
+      - name: Report in an issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="Broken links on the website"
+          open=$(gh issue list --state open --search "\"$title\" in:title" --json number --jq '.[0].number')
+          if [ -f links-report.md ]; then
+            if [ -n "$open" ]; then
+              gh issue edit "$open" --body-file links-report.md
+              gh issue comment "$open" --body "Still broken as of $(date -u +%Y-%m-%d); list above updated."
+            else
+              gh issue create --title "$title" --body-file links-report.md
+            fi
+          elif [ -n "$open" ]; then
+            gh issue close "$open" --comment "All links work again as of $(date -u +%Y-%m-%d). Closing."
+          fi

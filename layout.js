@@ -104,4 +104,14 @@
       toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
     });
   });
+
+  // Visitor stats (GoatCounter: no cookies, no personal data; dashboard at ouhallak.goatcounter.com).
+  // Only visits to the live site are counted, not the test site or local previews.
+  if (location.hostname === "schmittlab.com" || location.hostname === "www.schmittlab.com") {
+    const stats = document.createElement("script");
+    stats.async = true;
+    stats.src = "https://gc.zgo.at/count.js";
+    stats.dataset.goatcounter = "https://ouhallak.goatcounter.com/count";
+    document.head.appendChild(stats);
+  }
 })();

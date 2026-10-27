@@ -98,3 +98,28 @@ To publish them: open the pull request → *Files changed* → edit `publication
 paper's `topics = {...}`, then *Merge*. To reject one, delete its entry and add its DOI to
 `.github/ignored-dois.txt` so it isn't suggested again. You can also run the check any time:
 Actions tab → "Check for new papers" → *Run workflow*.
+
+## Adding a news post (form)
+
+Go to **Issues → New issue → "News post"**, fill in the title, date, text, optional link, and drag
+in a photo, then submit. Within a minute or two a pull request appears with the post added to
+`news.json` and the photo resized into `assets/news/`. Check it and **Merge** to publish (the issue
+closes itself). To change something before merging, edit the issue: the pull request updates.
+Only group members' forms are processed. You can still edit `news.json` by hand if you prefer.
+
+## Broken links (monthly)
+
+On the 2nd of each month the "Check links" Action tests every external link (DOIs, ORCID, Scholar,
+funder sites, news links). Anything broken is listed in a single **"Broken links on the website"**
+issue, which closes itself once everything works again. LinkedIn blocks automated checks, so
+LinkedIn links aren't checked.
+
+## Keeping the Actions up to date
+
+Dependabot (`.github/dependabot.yml`) occasionally opens a pull request updating the building
+blocks the Actions use. If the checks on it pass, merge it.
+
+## Visitor stats
+
+Page views on schmittlab.com are counted by GoatCounter (no cookies, no personal data):
+dashboard at https://ouhallak.goatcounter.com. The test site isn't counted.
