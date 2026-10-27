@@ -69,6 +69,12 @@ body {
   line-height: 1.6;
 }
 
+/* Keep subscripts and superscripts (CO₂, H₂) from pushing their line taller */
+sub,
+sup {
+  line-height: 0;
+}
+
 h1,
 h2 {
   font-family: "IBM Plex Sans", sans-serif;
