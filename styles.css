@@ -378,6 +378,7 @@ nav a.active {
   text-decoration: underline;
 }
 
+/* Featured card styling — the most recent item */
 .news-item-featured {
   background: #f2f7f2;
   border-left: 5px solid #1E5631;
@@ -1108,6 +1109,7 @@ nav a.active {
 }
 @media (min-width: 769px) and (max-width: 1150px) {
 
+  /* Nav — reduce gap so items don't wrap */
   .main-nav {
     gap: 1.1rem;
   }
@@ -1116,20 +1118,24 @@ nav a.active {
     font-size: 0.9rem;
   }
 
+  /* Members grid — force 2 columns on mid-width tablets */
   .members-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
 
+  /* Homepage team grid — 3 columns max */
   .homepage-team {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
   }
 
+  /* Recent publications — 2 columns */
   #recent-publications {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* PI profile — keep two columns but tighten */
   .pi-profile {
     grid-template-columns: 1fr 2fr;
     gap: 1.5rem;
@@ -1140,6 +1146,7 @@ nav a.active {
     height: 170px;
   }
 
+  /* Footer logos — allow wrapping earlier */
   .footer-funding {
     flex-wrap: wrap;
     justify-content: center;
@@ -1151,10 +1158,12 @@ nav a.active {
     height: 46px;
   }
 
+  /* Footer layout — stack on smaller tablets */
   .footer-content {
     gap: 2.5rem;
   }
 
+  /* Section padding */
   .section {
     padding: 2.5rem 2rem;
   }
@@ -1304,16 +1313,6 @@ nav a.active {
   overflow-wrap: anywhere;
 }
 
-/* Text for screen readers and search engines that isn't shown on screen */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
-}
-
 /* Link to the full news archive, and the archive's tag filter note */
 .news-more {
   display: inline-block;
@@ -1335,6 +1334,16 @@ nav a.active {
 .news-tag-note a {
   color: #1E5631;
   font-weight: 600;
+}
+
+/* Text for screen readers and search engines that isn't shown on screen */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }
 
 /* ---------- PUBLICATIONS PAGE ---------- */
@@ -1566,6 +1575,12 @@ main:focus {
   outline: none;
 }
 
+/* News, publications and team load a moment after the page; without this the
+   footer briefly shows near the top and then jumps down */
+main {
+  min-height: 100vh;
+}
+
 .noscript-note {
   max-width: 900px;
   margin: 1rem auto;
@@ -1593,6 +1608,10 @@ main:focus {
     background: #fff;
     color: #000;
     font-size: 11pt;
+  }
+
+  main {
+    min-height: 0;
   }
 
   .section {
